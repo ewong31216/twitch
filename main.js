@@ -34,6 +34,7 @@
                     searchText.value = search;
                 }
                 changed = true;
+                page = 0;
             }
 
             if(changed){
@@ -53,8 +54,8 @@
             if(searchText.value) {
                 hash.push('search=' + encodeURIComponent(searchText.value));
             }
-            if(page > 0){
-                hash.push('page=' + page + 1);
+            if(search == searchText.value && page > -1){
+                hash.push('page=' + (page + 1));
             }
             window.location.href = '#' + hash.join('&');
         },
@@ -88,11 +89,16 @@
             maxpage = !isNaN(searchObject.total) ? Math.max(Math.ceil(searchObject.total / limit), 1) : 1;
             totalPage.innerHTML = maxpage;
 
-            items.innerHTML = '';
-            for(var i = 0; i < streams.length; i++){
-                items.appendChild(createItem(streams[i]));
+            if(page >= maxpage){
+                page = maxpage - 1;
+                setHash();
+            }else {
+                items.innerHTML = '';
+                for (var i = 0; i < streams.length; i++) {
+                    items.appendChild(createItem(streams[i]));
+                }
+                bottom.setAttribute('class', '');
             }
-            bottom.setAttribute('class', '');
         },
         createItem = function(item){
             var container = document.createElement('div'),
