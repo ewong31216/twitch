@@ -4,18 +4,47 @@ body {
     background-color: #ffffef;
     min-width: 320px;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 20px 0;
 }
 div.body-background {
     background-image: url('images/sunhing.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 90px;
     left: 0;
     opacity: 0.1;
     width: 100%;
     height: 80%;
     z-index: -1;
+}
+.pages {
+    display: none;
+}
+i.fa {
+    margin-right: 10px;
+}
+div.title-div {
+    background-color: #ffffaa;
+    padding: 5px 10px;
+    border: 1px solid #dd0000;
+    border-radius: 10px;
+}
+div.title {
+    color: #aa0000;
+    font-size: 24px;
+    font-weight: 600;
+}
+a.item:hover {
+    text-decoration: none;
+}
+.item {
+    text-align: center;
+    overflow: hidden;
+}
+.item h3 {
+    font-size: 21px;
+    color: #aa0000;
 }
 nav.navbar {
     background-color: #ffffaa;
@@ -39,13 +68,26 @@ nav.navbar div.header-title {
     color: #aa0000;
     text-transform: uppercase;
 }
+nav.navbar div.media-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+nav.navbar div.media-icon a {
+    float: left;
+    margin-left: 5px;
+}
+nav.navbar div.media-icon img {
+    height: 24px;
+}
 nav.navbar div.est-date {
-    float: right;
     font-family: "brush-script-std", cursive;
     color: #990000;
     font-weight: 600;
     font-size: 20px;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
 }
 div.sidebar {
     margin-top: 20px;
@@ -65,15 +107,94 @@ div.sidebar .list-group .list-group-item:hover {
 div.sidebar .brand-carousel {
     margin-top: 60px;
 }
+div.sidebar .brand-carousel a:hover {
+    text-decoration: none;
+}
+div.sidebar .brand-carousel .title-div {
+    font-size: 18px;
+    color: #aa0000;
+    text-align: center;
+    border: none;
+}
+div.sidebar .brand-carousel .title-div:hover {
+    background-color: #ffff88;
+}
 div.sidebar .brand-carousel .item {
+    display: block;
     margin: 0 auto;
     text-align: center;
 }
 div.sidebar .brand-carousel .item h3 {
     color: #aa0000;
 }
-
+div.sidebar .brand-carousel .item div.image {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+div.content div.pages {
+    margin-top: 20px;
+}
+div.content div.page-products a.item {
+    float: left;
+    margin: 0 20px 0 0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    width: 180px;
+    height: 240px;
+}
+div.content div.page-products a.item:hover {
+    border: 1px solid #aa0000;
+    background-color: #ffffef;
+    box-shadow: 0 0 5px #aa0000;
+}
+div.content div.page-products div.image {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+div.content div.page-products div.brand-empty, div.content div.page-products div.products-empty {
+    margin-top: 40px;
+    font-size: 21px;
+    color: #dd0000;
+    font-weight: 600;
+}
+div.content div.page-products div.search-brand, div.content div.page-products div.search-product {
+    float: right;
+    font-size: 15px;
+}
+div.content div.page-products div.brand-content a.item {
+    display: inline-block;
+    float: none;
+    width: 180px;
+}
+div.content div.page-products div.products-title, div.content div.page-products div.product-detail-title {
+    margin-top: 20px;
+}
+div.content div.page-products div.product-detail-content {
+    margin-top: 20px;
+}
+div.content div.page-products div.product-detail-content img {
+    float: left;
+    margin-right: 20px;
+}
+div.content div.page-products div.product-detail-content div.description {
+    margin-bottom: 20px;
+}
+div.content div.page-products div.product-detail-content div.subtitle {
+    font-size: 18px;
+    font-weight: 600;
+}
 @media (min-width: 481px) and (max-width: 600px){
+    i.fa {
+        margin-right: 7px;
+    }
     nav.navbar div.header-title {
         font-size: 30px;
         letter-spacing: 0;
@@ -81,38 +202,64 @@ div.sidebar .brand-carousel .item h3 {
     nav.navbar div.est-date {
         font-size: 12px;
     }
+    div.sidebar .brand-carousel .title-div {
+        font-size: 14px;
+    }
 }
 
-@media (min-width: 321px) and (max-width: 480px){
+@media (min-width: 361px) and (max-width: 480px){
+    i.fa {
+        margin-right: 4px;
+    }
     nav.navbar div.header-title {
         font-size: 20px;
         letter-spacing: -1px;
     }
     nav.navbar div.est-date {
         font-size: 10px;
-        margin-top: 0;
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
+    }
+    div.sidebar .brand-carousel .title-div {
+        font-size: 8px;
     }
     div.sidebar .list-group .list-group-item {
         font-size: 8px;
     }
 }
 
+@media (min-width: 321px) and (max-width: 360px){
+    i.fa {
+        margin-right: 2px;
+    }
+    nav.navbar div.header-title {
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+    nav.navbar div.est-date {
+        font-size: 10px;
+    }
+    div.sidebar .brand-carousel .title-div {
+        font-size: 7px;
+    }
+    div.sidebar .list-group .list-group-item {
+        font-size: 6px;
+    }
+}
+
 @media (max-width: 320px){
+    i.fa {
+        margin-right: 2px;
+    }
     nav.navbar div.header-title {
         font-size: 20px;
         letter-spacing: -1px;
     }
     nav.navbar div.est-date {
         font-size: 8px;
-        margin-top: 0;
-        position: absolute;
-        bottom: 10px;
-        right: 20px;
+    }
+    div.sidebar .brand-carousel .title-div {
+        font-size: 6px;
     }
     div.sidebar .list-group .list-group-item {
-        font-size: 6px;
+        font-size: 4px;
     }
 }
