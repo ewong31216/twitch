@@ -1,33 +1,35 @@
-$(function(){
-    if(!window.sunhing){window.sunhing = {}}
-    var checkPage = function(){
+$(function() {
+    if (!window.sunhing) {
+        window.sunhing = {}
+    }
+    var checkPage = function () {
         createParams(window.location.hash);
     };
-    var createParams = function(hash){
+    var createParams = function (hash) {
         window.sunhing.params = {};
-        hash = hash.replace(/^#/,'');
+        hash = hash.replace(/^#/, '');
         var hashArray = hash.split('&');
-        if(hashArray && hashArray.length){
-            $.each(hashArray, function(i, paramString){
+        if (hashArray && hashArray.length) {
+            $.each(hashArray, function (i, paramString) {
                 var keyValue = paramString.split('=');
-                if(keyValue && keyValue.length === 2){
+                if (keyValue && keyValue.length === 2) {
                     window.sunhing.params[keyValue[0]] = decodeURIComponent(keyValue[1]);
                 }
             });
         }
-        if(!window.sunhing.params.page){
+        if (!window.sunhing.params.page) {
             window.sunhing.params.page = 'home';
         }
         setPage(window.sunhing.params.page);
     };
-    var setPage = function(page){
+    var setPage = function (page) {
         window.sunhing.currentPage = page;
         $('.data-div').empty();
         $('.sidenav .list-group-item').removeClass('active');
         $('.sidenav .list-group-item.' + page).addClass('active');
         $('.pages').hide();
         $('.page-' + page).show();
-        switch(page){
+        switch (page) {
             case 'home':
                 listBrand($('.brand-carousel .items'));
                 makeCarousel($('.brand-carousel .items'));
@@ -35,29 +37,71 @@ $(function(){
             case 'products':
                 showProductsAndBrand();
                 break;
+            case 'recipes':
+                showRecipes();
+                break;
         }
     };
-    var listBrand = function(page){
-        if(window.sunhing.brand && window.sunhing.brand.length){
-            $.each(window.sunhing.brand, function(i, brand){
+
+    var checkCancelSearch = function(input){
+        var $this = $(input),
+            value = $this.val(),
+            parent = $this.closest('div.search'),
+            cancel = parent.find('.cancel-search');
+        if(cancel && cancel.length) {
+            if (value.length) {
+                cancel.show();
+            }else{
+                cancel.hide();
+            }
+        }
+    };
+    var doSearch = function (self, e, url) {
+        var $this = $(self),
+            search = function () {
+                var value = $this.val();
+                if (value !== window.sunhing.params.search) {
+                    window.location.href = url + '&search=' + encodeURIComponent(value);
+                }
+                checkCancelSearch($this);
+            };
+        clearTimeout(window.sunhing.searchTimeout);
+        if (e && e.keyCode) {
+            switch (e.keyCode) {
+                case 27:
+                    $this.val('');
+                case 13:
+                    search();
+                    break;
+                default:
+                    window.sunhing.searchTimeout = setTimeout(search, 1000);
+                    break;
+            }
+        }else{
+            search();
+        }
+    };
+    var listBrand = function (page) {
+        if (window.sunhing.brand && window.sunhing.brand.length) {
+            $.each(window.sunhing.brand, function (i, brand) {
                 page.append('<a href="#page=products&mode=brand&brand=' + encodeURIComponent(brand.name) + '" class="brand-item item"><h3>' + brand.name + '</h3><div class="image" style="background-image:url(\'' + brand.image + '\')"></div><h4>' + brand.description + '</h4></a>');
             });
         }
     };
-    var makeCarousel = function(page){
+    var makeCarousel = function (page) {
         var items = page.find('.item'),
             duration = 3000,
             effect = 1000,
             randomItem = Math.floor(Math.random() * items.length);
-        var nextItem = function(){
+        var nextItem = function () {
             var current = page.find('.item.active');
-            if(current && current.length){
-                current.removeClass('active').fadeOut(effect, function(){
+            if (current && current.length) {
+                current.removeClass('active').fadeOut(effect, function () {
                     var next = current.next('.item');
-                    if(!next || !next.length){
+                    if (!next || !next.length) {
                         next = $(items[0]);
                     }
-                    next.addClass('active').fadeIn(effect, function(){
+                    next.addClass('active').fadeIn(effect, function () {
                         window.sunhing.brandCarousel = setTimeout(nextItem, duration);
                     });
                 });
@@ -65,39 +109,39 @@ $(function(){
         };
         clearTimeout(window.sunhing.brandCarousel);
         items.hide().removeClass('active');
-        $(items[randomItem]).addClass('active').fadeIn(effect, function(){
+        $(items[randomItem]).addClass('active').fadeIn(effect, function () {
             window.sunhing.brandCarousel = setTimeout(nextItem, duration);
         });
     };
-    var showProductsAndBrand = function(){
-        if(window.sunhing.params.product){
-            var products = $.grep(window.sunhing.products, function(product){
+    var showProductsAndBrand = function () {
+        if (window.sunhing.params.product) {
+            var products = $.grep(window.sunhing.products, function (product) {
                 return product && product.name === window.sunhing.params.product;
             });
-            if(products && products.length === 1){
+            if (products && products.length === 1) {
                 showProductDetail(products[0]);
                 showBrandByBrandName(products[0].brand);
             }
-        }else if(window.sunhing.params.brand){
+        } else if (window.sunhing.params.brand) {
             showBrandByBrandName(window.sunhing.params.brand);
-        }else{
+        } else {
             showAllBrand();
-            if(window.sunhing.params.mode === 'brand' && window.sunhing.params.search){
+            if (window.sunhing.params.mode === 'brand' && window.sunhing.params.search) {
                 filterBrand(window.sunhing.params.search);
             }
         }
     };
-    var showBrandByBrandName = function(name){
-        var brands = $.grep(window.sunhing.brand, function(brand){
+    var showBrandByBrandName = function (name) {
+        var brands = $.grep(window.sunhing.brand, function (brand) {
             return brand && brand.name === name;
         });
-        if(brands && brands.length === 1) {
+        if (brands && brands.length === 1) {
             showBrandDetail(brands[0]);
-        }else{
+        } else {
             showAllBrand();
         }
     };
-    var showProductDetail = function(product){
+    var showProductDetail = function (product) {
         var productsTitle = $('.products-title'),
             productsContent = $('.products-content'),
             productDetailTitle = $('.product-detail-title'),
@@ -106,65 +150,66 @@ $(function(){
         productsContent.empty().hide();
         productDetailTitle.html(product.name).show();
         productDetailContent.html('<img src="' + product.image + '" />');
-        if(product.description && product.description.length){
+        if (product.description && product.description.length) {
             productDetailContent.append('<div class="description">' + product.description + '</div>');
         }
-        if(product.information && product.information.length){
+        if (product.information && product.information.length) {
             productDetailContent.append('<div class="subtitle">Product Information</div><ul class="info"></ul>');
             var infoUL = productDetailContent.find('ul.info');
-            $.each(product.information, function(i, info){
+            $.each(product.information, function (i, info) {
                 infoUL.append('<li>' + info + '</li>');
             });
         }
         productDetailContent.show();
     };
-    var showBrandDetail = function(brand){
+    var showBrandDetail = function (brand) {
         var brandDetail = $('.brand-content'),
             allBrand = $('.all-brand-content');
         brandDetail.html('<a href="#page=products&mode=brand&brand=' + encodeURIComponent(brand.name) + '" class="brand-item item"><h3>' + brand.name + '</h3><div class="image" style="background-image:url(\'' + brand.image + '\')"></div></a>');
         brandDetail.show();
         allBrand.hide();
-        if(!window.sunhing.params.product){
+        if (!window.sunhing.params.product) {
             showAllProductsByBrand(brand.name);
-            if(window.sunhing.params.mode === 'product' && window.sunhing.params.search){
+            if (window.sunhing.params.mode === 'product' && window.sunhing.params.search) {
                 filterProduct(window.sunhing.params.search);
             }
         }
     };
-    var filterProduct = function(search){
+    var filterProduct = function (search) {
         var searchProduct = $('#search-product'),
             allProducts = $('.products-content .product-item'),
             emptyDiv = $('.products-empty'),
             found = false;
-        if(allProducts && allProducts.length){
-            $.each(allProducts, function(i, product){
+        if (allProducts && allProducts.length) {
+            $.each(allProducts, function (i, product) {
                 var $product = $(product),
                     name = $product.find('h3').text(),
                     test = new RegExp(search, "i");
-                if(test.test(name)){
+                if (test.test(name)) {
                     $product.show();
                     found = true;
-                }else{
+                } else {
                     $product.hide();
                 }
             });
         }
-        if(found){
+        if (found) {
             emptyDiv.empty().hide();
-        }else{
+        } else {
             emptyDiv.html('There is no matching product for the keyword "' + search + '" you have entered, please refine your keyword and try again.').show();
         }
-        if(searchProduct.val() !== search){
+        if (searchProduct.val() !== search) {
             searchProduct.val(search);
+            checkCancelSearch(searchProduct);
         }
     };
-    var showAllBrand = function(){
+    var showAllBrand = function () {
         var pageProducts = $('.page-products'),
             allBrand = $('.all-brand-content'),
             brandDetail = $('.brand-content');
-        if(allBrand.is(':empty')){
-            if(window.sunhing.brand && window.sunhing.brand.length){
-                $.each(window.sunhing.brand, function(i, brand){
+        if (allBrand.is(':empty')) {
+            if (window.sunhing.brand && window.sunhing.brand.length) {
+                $.each(window.sunhing.brand, function (i, brand) {
                     allBrand.append('<a href="#page=products&mode=brand&brand=' + encodeURIComponent(brand.name) + '" class="brand-item item"><h3>' + brand.name + '</h3><div class="image" style="background-image:url(\'' + brand.image + '\')"></div></a>');
                 });
             }
@@ -173,86 +218,116 @@ $(function(){
         brandDetail.empty().hide();
         allBrand.show();
     };
-    var filterBrand = function(search){
+    var filterBrand = function (search) {
         var searchBrand = $('#search-brand'),
             allBrands = $('.all-brand-content .brand-item'),
             emptyDiv = $('.brand-empty'),
             found = false;
-        if(allBrands && allBrands.length){
-            $.each(allBrands, function(i, brand){
+        if (allBrands && allBrands.length) {
+            $.each(allBrands, function (i, brand) {
                 var $brand = $(brand),
                     name = $brand.find('h3').text(),
                     test = new RegExp(search, "i");
-                if(test.test(name)){
+                if (test.test(name)) {
                     $brand.show();
                     found = true;
-                }else{
+                } else {
                     $brand.hide();
                 }
             });
         }
-        if(found){
+        if (found) {
             emptyDiv.empty().hide();
-        }else{
+        } else {
             emptyDiv.html('There is no matching brand for the keyword "' + search + '" you have entered, please refine your keyword and try again.').show();
         }
-        if(searchBrand.val() !== search){
+        if (searchBrand.val() !== search) {
             searchBrand.val(search);
+            checkCancelSearch(searchBrand);
         }
     };
-    var showAllProductsByBrand = function(name){
-        var products = $.grep(window.sunhing.products, function(product){
+    var showAllProductsByBrand = function (name) {
+        var products = $.grep(window.sunhing.products, function (product) {
             return product && product.brand === name;
         });
         showAllProducts(products);
     };
-    var showAllProducts = function(products){
+    var showAllProducts = function (products) {
         var productsTitle = $('.products-title'),
             productsContent = $('.products-content'),
             productDetailTitle = $('product-detail-title'),
             productDetailContent = $('.product-detail-content');
         productDetailTitle.empty().hide();
         productDetailContent.empty().hide();
-        $.each(products, function(i, product){
+        $.each(products, function (i, product) {
             productsContent.append('<a href="#page=products&product=' + encodeURIComponent(product.name) + '" class="product-item item"><h3>' + product.name + '</h3><div class="image" style="background-image:url(\'' + product.image + '\')"></div></a>');
         });
         productsTitle.show();
         productsContent.show();
     };
-    $(window).on('hashchange', function(e){
+    var showRecipes = function(){
+        if (window.sunhing.params.recipe) {
+            var recipes = $.grep(window.sunhing.recipes, function (recipe) {
+                return recipe && recipe.name === window.sunhing.params.recipe;
+            });
+            if (recipes && recipes.length === 1) {
+                showRecipeDetail(recipes[0]);
+            }
+        } else {
+            showAllRecipes();
+        }
+    };
+    var showAllRecipes = function(){
+        var types = [],
+            content = $('.recipes.all-recipes-content');
+        if(window.sunhing.recipes && window.sunhing.recipes.length){
+            $.each(window.sunhing.recipes, function(i, recipe){
+                if(recipe && recipe.type && types.indexOf(recipe.type) === -1){
+                    types.push(recipe.type);
+                }
+            });
+        }
+        if(types.length){
+            $.each(types, function(i, type){
+                var thisDiv = $('<div class="type-item"></div>'),
+                    thisRecipes = $.grep(window.sunhing.recipes, function(recipe){
+                        return recipe && recipe.type === type;
+                    });
+                if(thisRecipes && thisRecipes.length) {
+                    var thisContent = $('<div class="content"></div>');
+                    thisDiv.append('<div class="title">' + type + '</div>').append(thisContent);
+                    $.each(thisRecipes, function(j, recipe){
+                        thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item"><h3>' + recipe.name + '</h3></a>');
+                        if(recipe.image && recipe.image.length){
+                            thisContent.find('a').append('<div class="image" style="background-image:url(\'' + recipe.image + '\')"></div>');
+                        }
+                    });
+                }
+                content.append(thisDiv);
+            });
+        }
+    };
+    var showRecipeDetail = function(recipe){};
+    $(window).on('hashchange', function (e) {
         checkPage();
     });
     window.sunhing.currentPage = '';
     checkPage();
-    $('#search-brand').on('keyup', function(e){
-        var searchBrand = function(){
-            var value = $('#search-brand').val();
-            if(value !== window.sunhing.params.search){
-                window.location.href = '#page=products&mode=brand&search=' + encodeURIComponent(value);
-            }
-        };
-        clearTimeout(window.sunhing.searchTimeout);
-        if(e && e.keyCode === 13){
-            searchBrand();
-        }else {
-            window.sunhing.searchTimeout = setTimeout(searchBrand, 1000);
-        }
+    $('#search-brand').on('keyup', function (e) {
+        var self = this;
+        doSearch(self, e, '#page=products&mode=brand');
     });
     $('#search-product').on('keyup', function(e){
-        var searchProduct = function(){
-            var value = $('#search-product').val();
-            if(value !== window.sunhing.params.search){
-                window.location.href = '#page=products&mode=product&brand=' + encodeURIComponent(window.sunhing.params.brand) + '&search=' + encodeURI(value);
-            }
-        };
-        clearTimeout(window.sunhing.searchTimeout);
-        if(e && e.keyCode === 13){
-            searchBrand();
-        }else {
-            window.sunhing.searchTimeout = setTimeout(searchProduct, 1000);
-        }
+        var self = this;
+        doSearch(self, e, '#page=products&mode=product&brand=' + encodeURIComponent(window.sunhing.params.brand));
     });
     $('a').click(function(e){
         clearTimeout(window.sunhing.searchTimeout);
+    });
+    $('.cancel-search').click(function(e){
+        var $this = $(this),
+            parent = $this.closest('div.search'),
+            textbox = parent.find('input[type=text]');
+        textbox.val('').trigger('keyup');
     });
 });

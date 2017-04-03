@@ -24,6 +24,16 @@ div.body-background {
 i.fa {
     margin-right: 10px;
 }
+div.search input[type=text] {
+    padding-right: 20px;
+    width: 200px;
+}
+div.search i.fa.fa-times {
+    cursor: pointer;
+    position: relative;
+    left: 203px;
+    display: none;
+}
 div.title-div {
     background-color: #ffffaa;
     padding: 5px 10px;
