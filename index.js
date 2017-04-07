@@ -288,7 +288,13 @@ $(function() {
             });
         }
         if(types.length){
+            var nav = $('<ul class="recipe-nav nav-bar"></ul>'),
+                navContent = $('<div class="nav-content"></div>');
+            nav.append('<li class="all active">All</li>');
+            content.append(nav);
+            content.append(navContent);
             $.each(types, function(i, type){
+                nav.append('<li class="' + type.replace(' ','-') + '">' + type + '</li>');
                 var thisDiv = $('<div class="type-item"></div>'),
                     thisRecipes = $.grep(window.sunhing.recipes, function(recipe){
                         return recipe && recipe.type === type;
@@ -297,17 +303,81 @@ $(function() {
                     var thisContent = $('<div class="content"></div>');
                     thisDiv.append('<div class="title">' + type + '</div>').append(thisContent);
                     $.each(thisRecipes, function(j, recipe){
-                        thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item"><h3>' + recipe.name + '</h3></a>');
+                        thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item type-' + type.replace(' ','-') + '"><h3>' + recipe.name + '</h3></a>');
                         if(recipe.image && recipe.image.length){
                             thisContent.find('a').append('<div class="image" style="background-image:url(\'' + recipe.image + '\')"></div>');
                         }
                     });
                 }
-                content.append(thisDiv);
+                navContent.append(thisDiv);
+            });
+            nav.find('li').click(function(ev){
+                var $this = $(this);
+                if(!$this.hasClass('active')){
+                    var type = $this.attr('class');
+                    nav.find('li.active').removeClass('active');
+                    $this.addClass('active');
+                    if(type === 'all'){
+                        content.find('div.title').show();
+                        content.find('.recipe-item').show();
+                    }else{
+                        content.find('div.title').hide();
+                        content.find('.recipe-item').hide();
+                        content.find('.recipe-item.type-' + type.replace(' ','-')).show();
+                    }
+                }
             });
         }
+        if(window.sunhing.params.type){
+            content.find('ul.recipe-nav').find('li.' + window.sunhing.params.type.replace(' ','-')).click();
+        }
     };
-    var showRecipeDetail = function(recipe){};
+    var showRecipeDetail = function(recipe){
+        var content = $('.recipes-detail-content'),
+            nav = $('<ul class="recipe-nav nav-bar"></ul>'),
+            navContent = $('<div class="nav-content"></div>');
+        nav.append('<li class="all"><a href="#page=recipes">Recipes</a></li>');
+        nav.append('<li class="active">' + recipe.name + '</li>');
+        content.append(nav);
+        content.append(navContent);
+        navContent.append('<div class="title">' + recipe.name + '</div>');
+        navContent.append('<div class="servings">' + recipe.servings + '</div>');
+        navContent.append('<img src="' + recipe.image + '" />');
+        if (recipe.ingredients && recipe.ingredients.length) {
+            var ingredientDiv = $('<div class="ingredients"></div>');
+            ingredientDiv.append('<div class="title">Ingredients</div>');
+            $.each(recipe.ingredients, function(i, ingredient){
+                if(ingredient && ingredient.title) {
+                    ingredientDiv.append('<div class="name">' + ingredient.title + '</div>');
+                }
+                if(ingredient && ingredient.items && ingredient.items.length){
+                    var itemsUL = $('<ul class="lists"></ul>');
+                    $.each(ingredient.items, function(j, item){
+                        itemsUL.append('<li class="list">' + item + '</li>');
+                    });
+                    ingredientDiv.append(itemsUL);
+                }
+            });
+            navContent.append(ingredientDiv);
+        }
+        if (recipe.directions && recipe.directions.length) {
+            var directionDiv = $('<div class="directions"></div>');
+            directionDiv.append('<div class="title">Directions</div>');
+            $.each(recipe.directions, function(i, direction){
+                if(direction && direction.title) {
+                    directionDiv.append('<div class="name">' + direction.title + '</div>');
+                }
+                if(direction && direction.items && direction.items.length){
+                    var itemsOL = $('<ol class="lists"></ol>');
+                    $.each(direction.items, function(j, item){
+                        itemsOL.append('<li class="list">' + item + '</li>');
+                    });
+                    directionDiv.append(itemsOL);
+                }
+            });
+            navContent.append(directionDiv);
+        }
+    };
     $(window).on('hashchange', function (e) {
         checkPage();
     });

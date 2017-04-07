@@ -24,6 +24,14 @@ div.body-background {
 i.fa {
     margin-right: 10px;
 }
+div.image {
+    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
 div.search input[type=text] {
     padding-right: 20px;
     width: 200px;
@@ -44,6 +52,13 @@ div.title {
     color: #aa0000;
     font-size: 24px;
     font-weight: 600;
+}
+ul.nav-bar li a {
+    color: black;
+}
+ul.nav-bar li a:hover {
+    text-decoration: none;
+    color: black;
 }
 a.item:hover {
     text-decoration: none;
@@ -137,14 +152,6 @@ div.sidebar .brand-carousel .item {
 div.sidebar .brand-carousel .item h3 {
     color: #aa0000;
 }
-div.sidebar .brand-carousel .item div.image {
-    margin: 0 auto;
-    width: 140px;
-    height: 140px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-}
 div.content div.pages {
     margin-top: 20px;
 }
@@ -200,6 +207,37 @@ div.content div.page-products div.product-detail-content div.description {
 div.content div.page-products div.product-detail-content div.subtitle {
     font-size: 18px;
     font-weight: 600;
+}
+div.content div.page-recipes ul.recipe-nav {
+    padding: 0;
+}
+div.content div.page-recipes ul.recipe-nav li {
+    font-size: 18px;
+    background-color: #ffffef;
+    float: left;
+    list-style: none;
+    padding: 5px 20px 0;
+    margin-right: 10px;
+    border-left: 1px solid #dd0000;
+    border-right: 1px solid #dd0000;
+    border-top: 1px solid #dd0000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+}
+div.content div.page-recipes ul.recipe-nav li.active {
+    background-color: #dd0000;
+    color: #ffffaa;
+    font-weight: 600;
+    cursor: default;
+}
+div.content div.page-recipes div.nav-content {
+    clear: both;
+    padding: 10px 20px;
+    background-color: #ffffef;
+    border: 1px solid #dd0000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 @media (min-width: 481px) and (max-width: 600px){
     i.fa {

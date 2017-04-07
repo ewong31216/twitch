@@ -2,6 +2,7 @@ if(!window.sunhing){window.sunhing = {}}
 window.sunhing.recipes = [
 
 //--------------------- Start of Recipes ---------------------//
+//--------------------- Main Dish ---------------------//
 {
 name: 'Hainan Chicken',
 servings: 'Make 4 servings',
@@ -90,6 +91,87 @@ directions: [
 },
 ],
 image: 'images/recipes/chickenhainan.jpg',
+},
+//--------------------- Desert ---------------------//
+{
+name: 'Pastel de Tres Leches (Three Milk Cake)',
+servings: 'Make 6–8 servings',
+description: '',
+type: 'Desert',
+ingredients: [
+{
+'title': 'Bizcochuelo',
+'items': [
+    '1 teaspoon lemon peel',
+    '4 egg whites',
+    '4 egg yolks',
+    '½ cup sugar',
+    '4 tablespoons of corn starch',
+    '3 tablespoons corn flour',
+],
+},
+{
+'title': 'Tres Leche Mix',
+'items': [
+    '1 can <a href="#page=products&mode=type&type=Dairy">condensed milk</a>',
+    '2 cans <a href="#page=products&mode=type&type=Dairy">evaporated milk</a>',
+],
+},
+],
+directions: [
+{
+'title': 'Bizcochuelo',
+'items': [
+    'For convenience, buy pre-baked bizcochuelo. Otherwise, beat egg whites until soft peaks form.',
+    'Add yolks one by one while gradually adding sugar. Reduce mixer speed and add remaining ingredients one spoon at a time.',
+    'Preheat oven to 350 °F.',
+    'Pour mixture in a rectangular baking pan',
+    'Bake for about 20 minutes or until it turns golden brown. Remove from oven and let cool.',
+],
+},
+{
+'title': 'Tres Leche Mix',
+'items': [
+    'Bath the bizcochuelo with mixture of tres leches completely covering until it absorbs into the dough.',
+    'Decorate with meringue, strawberries, or whipped cream and refrigerate until ready to serve.',
+],
+},
+],
+image: 'images/recipes/cakethreemilk.jpg',
+},
+//--------------------- Drinks ---------------------//
+{
+name: 'Horchata',
+servings: 'Make 8 cups',
+description: '',
+type: 'Drinks',
+ingredients: [
+{
+'title': '',
+'items': [
+    '2 cans <a href="#page=products&mode=type&type=Dairy">filled condensed milk</a>',
+    '2 cans <a href="#page=products&mode=type&type=Dairy">filled evaporated milk</a>',
+    '2 tablespoons vanilla extract',
+    '1 gallon water',
+    '½ tablespoon ground cinnamon',
+    '½ cinnamon stick',
+    '½ cup rice',
+],
+},
+],
+directions: [
+{
+'title': '',
+'items': [
+    'Wash the rice, set in a large saucepan, then add water, ground cinnamon and cinnamon stick.',
+    'Remove the extra water and the cinnamon stick. Cover loosely and let stand overnight.',
+    'Place in a blender jar and blend for 3–5 minutes until the mixture is smooth. Strain the mixture through dampened cheesecloth or coffee filter.',
+    'Combine with filled evaporated milk, filled condensed milk, and vanilla extract into a large saucepan.',
+    'Refrigerate at least 4 hours. Pour the mixture into a pitcher, serve cold over ice.',
+],
+},
+],
+image: 'images/recipes/horchata.jpg',
 },
 //--------------------- End of Recipes ---------------------//
 
