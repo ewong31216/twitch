@@ -33,6 +33,9 @@ $(function() {
             case 'home':
                 listBrand($('.brand-carousel .items'));
                 makeCarousel($('.brand-carousel .items'));
+                listProducts($('.home.home-products'));
+                listRecipes($('.home.home-recipes'));
+                makeSlideShow($('.pages.page-home'));
                 break;
             case 'products':
                 showProductsAndBrand();
@@ -42,7 +45,6 @@ $(function() {
                 break;
         }
     };
-
     var checkCancelSearch = function(input){
         var $this = $(input),
             value = $this.val(),
@@ -113,6 +115,9 @@ $(function() {
             window.sunhing.brandCarousel = setTimeout(nextItem, duration);
         });
     };
+    var listProducts = function (page) {};
+    var listRecipes = function (page) {};
+    var makeSlideShow = function (page) {};
     var showProductsAndBrand = function () {
         if (window.sunhing.params.product) {
             var products = $.grep(window.sunhing.products, function (product) {
@@ -303,13 +308,15 @@ $(function() {
                     var thisContent = $('<div class="content"></div>');
                     thisDiv.append('<div class="title">' + type + '</div>').append(thisContent);
                     $.each(thisRecipes, function(j, recipe){
-                        thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item type-' + type.replace(' ','-') + '"><h3>' + recipe.name + '</h3></a>');
+                        var image = '';
                         if(recipe.image && recipe.image.length){
-                            thisContent.find('a').append('<div class="image" style="background-image:url(\'' + recipe.image + '\')"></div>');
+                            image = '<div class="image" style="background-image:url(\'' + recipe.image + '\')"></div>';
                         }
+                        thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item type-' + type.replace(' ','-') + '"><h3>' + recipe.name + '</h3>'  + image + '</a>');
                     });
                 }
                 navContent.append(thisDiv);
+                navContent.append('<br clear="all" />');
             });
             nav.find('li').click(function(ev){
                 var $this = $(this);
@@ -320,9 +327,11 @@ $(function() {
                     if(type === 'all'){
                         content.find('div.title').show();
                         content.find('.recipe-item').show();
+                        content.find('.type-item').addClass('row');
                     }else{
                         content.find('div.title').hide();
                         content.find('.recipe-item').hide();
+                        content.find('.type-item').removeClass('row');
                         content.find('.recipe-item.type-' + type.replace(' ','-')).show();
                     }
                 }

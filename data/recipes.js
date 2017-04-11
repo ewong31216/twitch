@@ -2,7 +2,7 @@ if(!window.sunhing){window.sunhing = {}}
 window.sunhing.recipes = [
 
 //--------------------- Start of Recipes ---------------------//
-//--------------------- Main Dish ---------------------//
+//--------------------- Hainan Chicken ---------------------//
 {
 name: 'Hainan Chicken',
 servings: 'Make 4 servings',
@@ -91,6 +91,51 @@ directions: [
 },
 ],
 image: 'images/recipes/chickenhainan.jpg',
+},
+//--------------------- Minced Meat Noodle ---------------------//
+{
+name: 'Minced Meat Noodle',
+servings: 'Make 2 servings',
+description: '',
+type: 'Main Dish',
+ingredients: [
+{
+'title': 'Noodles',
+'items': [
+    '4 pieces <a href="#page=products">Fortune® 14 oz. Quick Cooking Noodle</a>',
+    '1 teaspoon salt',
+],
+},
+{
+'title': 'Meat',
+'items': [
+    '½ tablespoon corn oil (alternatives are soybean oil or vegetable oil)',
+    '1 can <a href="#page=products">Fortune® 4.6 oz. Spiced Minced Pork & Binder Product</a>',
+    '1 tablespoon diced green onion',
+],
+},
+],
+directions: [
+{
+'title': 'Noodles',
+'items': [
+    'Place noodles in pan and add enough water to cover it.',
+    'Add salt and bring water to a boil.',
+    'Simmer for 3 minutes.',
+    'Rinse noodles in cold water and serve.',
+],
+},
+{
+'title': 'Meat',
+'items': [
+    'Heat the wok then add cooking oil.',
+    'Add meat and stir-fry until cooked',
+    'Pour over cooked noodles.',
+    'Sprinkle diced green onion on meat and serve.',
+],
+},
+],
+image: 'images/recipes/noodlemin.jpg',
 },
 //--------------------- Desert ---------------------//
 {
