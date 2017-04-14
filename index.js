@@ -284,7 +284,9 @@ $(function() {
     };
     var showAllRecipes = function(){
         var types = [],
-            content = $('.recipes.all-recipes-content');
+            content = $('.recipes.all-recipes-content'),
+            itemWidth = 180,
+            rowHeight = 300;
         if(window.sunhing.recipes && window.sunhing.recipes.length){
             $.each(window.sunhing.recipes, function(i, recipe){
                 if(recipe && recipe.type && types.indexOf(recipe.type) === -1){
@@ -306,7 +308,7 @@ $(function() {
                     });
                 if(thisRecipes && thisRecipes.length) {
                     var thisContent = $('<div class="content"></div>');
-                    thisDiv.append('<div class="title">' + type + '</div>').append(thisContent);
+                    thisDiv.append('<div class="title" style="top:' + (i * rowHeight + 50) + 'px;">' + type + '</div>').append(thisContent);
                     $.each(thisRecipes, function(j, recipe){
                         var image = '';
                         if(recipe.image && recipe.image.length){
@@ -314,6 +316,7 @@ $(function() {
                         }
                         thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item type-' + type.replace(' ','-') + '"><h3>' + recipe.name + '</h3>'  + image + '</a>');
                     });
+                    thisContent.width(thisRecipes.length * itemWidth);
                 }
                 navContent.append(thisDiv);
                 navContent.append('<br clear="all" />');
@@ -328,10 +331,16 @@ $(function() {
                         content.find('div.title').show();
                         content.find('.recipe-item').show();
                         content.find('.type-item').addClass('row');
+                        content.find('.type-item').find('.content').each(function(i, content){
+                            var $content = $(content),
+                                children = $content.children();
+                            $content.width(children.length * itemWidth);
+                        });
                     }else{
                         content.find('div.title').hide();
                         content.find('.recipe-item').hide();
                         content.find('.type-item').removeClass('row');
+                        content.find('.type-item').find('.content').width(content.width());
                         content.find('.recipe-item.type-' + type.replace(' ','-')).show();
                     }
                 }
@@ -339,6 +348,8 @@ $(function() {
         }
         if(window.sunhing.params.type){
             content.find('ul.recipe-nav').find('li.' + window.sunhing.params.type.replace(' ','-')).click();
+        }else{
+            content.find('.type-item').addClass('row');
         }
     };
     var showRecipeDetail = function(recipe){
@@ -351,7 +362,12 @@ $(function() {
         content.append(navContent);
         navContent.append('<div class="title">' + recipe.name + '</div>');
         navContent.append('<div class="servings">' + recipe.servings + '</div>');
-        navContent.append('<img src="' + recipe.image + '" />');
+        if(recipe.image && recipe.image.length){
+            navContent.append('<img src="' + recipe.image + '" />');
+        }
+        if(recipe.description && recipe.description.length){
+            navContent.append('<div class="description">' + recipe.description + '</div>');
+        }
         if (recipe.ingredients && recipe.ingredients.length) {
             var ingredientDiv = $('<div class="ingredients"></div>');
             ingredientDiv.append('<div class="title">Ingredients</div>');

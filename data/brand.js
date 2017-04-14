@@ -1,6 +1,12 @@
 if(!window.sunhing){window.sunhing = {}}
 window.sunhing.brand = [
-
+/* Format:
+{
+name: '',
+description: '',
+image: '',
+},
+ */
 //--------------------- Start of Brand ---------------------//
 {
 name: 'Longevity Brand',
