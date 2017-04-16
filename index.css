@@ -181,6 +181,7 @@ div.content div.page-products div.brand-empty, div.content div.page-products div
     font-size: 21px;
     color: #dd0000;
     font-weight: 600;
+    display: none;
 }
 div.content div.page-products div.search-brand, div.content div.page-products div.search-product {
     float: right;
@@ -190,6 +191,15 @@ div.content div.page-products div.brand-content a.item {
     display: inline-block;
     float: none;
     width: 180px;
+    height: 80px;
+}
+div.content div.page-products div.brand-content a.item h3 {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+div.content div.page-products div.brand-content a.item div.image {
+    width: 60px;
+    height: 60px;
 }
 div.content div.page-products div.products-title, div.content div.page-products div.product-detail-title {
     margin-top: 20px;
@@ -197,9 +207,9 @@ div.content div.page-products div.products-title, div.content div.page-products 
 div.content div.page-products div.product-detail-content {
     margin-top: 20px;
 }
-div.content div.page-products div.product-detail-content img {
-    float: left;
-    margin-right: 20px;
+div.content div.page-products div.product-detail-content div.image-container {
+    float: right;
+    margin-left: 20px;
 }
 div.content div.page-products div.product-detail-content div.description {
     margin-bottom: 20px;

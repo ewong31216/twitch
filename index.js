@@ -154,7 +154,16 @@ $(function() {
         productsTitle.hide();
         productsContent.empty().hide();
         productDetailTitle.html(product.name).show();
-        productDetailContent.html('<img src="' + product.image + '" />');
+        if(typeof product.image === 'string') {
+            productDetailContent.html('<div class="image-container"><img src="' + product.image + '" /></div>');
+        }else{
+            var html = '<div class="image-container">';
+            $.each(product.image, function(i, image){
+                html += '<img src="' + image + '" /><br />';
+            });
+            html += '</div>';
+            productDetailContent.html(html);
+        }
         if (product.description && product.description.length) {
             productDetailContent.append('<div class="description">' + product.description + '</div>');
         }
@@ -220,6 +229,8 @@ $(function() {
             }
         }
         pageProducts.find('.products').hide();
+        pageProducts.find('.brand-empty').hide();
+        pageProducts.find('.products-empty').hide();
         brandDetail.empty().hide();
         allBrand.show();
     };
@@ -262,10 +273,11 @@ $(function() {
             productsContent = $('.products-content'),
             productDetailTitle = $('product-detail-title'),
             productDetailContent = $('.product-detail-content');
+        $('.products-empty').hide();
         productDetailTitle.empty().hide();
         productDetailContent.empty().hide();
         $.each(products, function (i, product) {
-            productsContent.append('<a href="#page=products&product=' + encodeURIComponent(product.name) + '" class="product-item item"><h3>' + product.name + '</h3><div class="image" style="background-image:url(\'' + product.image + '\')"></div></a>');
+            productsContent.append('<a href="#page=products&product=' + encodeURIComponent(product.name) + '" class="product-item item"><h3>' + product.name + '</h3><div class="image" style="background-image:url(\'' + (typeof product.image === 'string' ? product.image : product.image[0]) + '\')"></div></a>');
         });
         productsTitle.show();
         productsContent.show();
