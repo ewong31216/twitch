@@ -23,7 +23,7 @@ directions: [
 ]
 },
 ],
-image: ''
+image: 'images/recipes/'
 },
  */
 //--------------------- Start of Recipes ---------------------//

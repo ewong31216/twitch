@@ -4,7 +4,7 @@ window.sunhing.brand = [
 {
 name: '',
 description: '',
-image: '',
+image: 'images/brand/',
 },
  */
 //--------------------- Start of Brand ---------------------//

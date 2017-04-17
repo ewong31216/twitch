@@ -1093,6 +1093,565 @@ information: [
 ],
 image: 'images/products/l_longscmgold14oz.jpg'
 },
+//--------------------- Longevity Brand Sweetened Condensed Milk 14 oz. (USA) ---------------------//
+{
+name: 'Longevity Brand Sweetened Condensed Milk 14 oz. (USA)',
+brand: 'Longevity Brand',
+type: 'Dairy',
+description: 'This product is sold only in the USA.',
+information: [
+    'Item Key: aa-scmlongc',
+    'UPC: 0 22652 16101 4',
+    'Ingredients: milk and sugar',
+    'Pack Size: 24 cans at 14 oz. per can',
+    'Weight per Tray: 25.0 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.406',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_longscm14oz.jpg'
+},
+//--------------------- Longevity Brand Sweetened Condensed Milk 300mL (Canada) ---------------------//
+{
+name: 'Longevity Brand Sweetened Condensed Milk 300mL (Canada)',
+brand: 'Longevity Brand',
+type: 'Dairy',
+description: 'This product is sold only in Canada.<br />No need for a can opener. This container uses an “easy open” tab.',
+information: [
+    'Item Key: aa-scmlongc',
+    'UPC: 0 22652 16101 4',
+    'Ingredients: evaporated milk, liquid sugar and lactose',
+    'Pack Size: 24 cans at 300mL per can',
+    'Weight per Tray: 25.0 lbs',
+    'Tray Dimensions: 12.25 in. (L) × 9.25 in. (W) × 7 in. (H)',
+    'Tray Cube: 0.459',
+    'Trays per Pallet: 105 trays',
+    'Pallet Pattern: (Ti) 15 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of Canada / Produit de Canada',
+],
+image: 'images/products/l_longcascm14oz.jpg'
+},
+//--------------------- Black & White Evaporated Milk 12 fl. oz. ---------------------//
+{
+name: 'Black & White Evaporated Milk 12 fl. oz.',
+brand: 'Black & White',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: ab-evabw212',
+    'UPC: 0 22652 16121 2',
+    'Ingredients: milk, dipotassium phosphate, carrageenan, and Vitamin D<sub>3</sub><br /><strong>Contains milk.</strong>',
+    'Pack Size: 24 cans at 12 fl. oz. per can',
+    'Weight per Tray: 23.25 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 4 in. (H)',
+    'Tray Cube: 0.50',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: [
+    'images/products/l_bwem12floz.jpg',
+    'images/products/l_bwem12floz2.jpg',
+]
+},
+//--------------------- Black & White Evaporated Milk 370mL (Canada) ---------------------//
+{
+name: 'Black & White Evaporated Milk 370mL (Canada)',
+brand: 'Black & White',
+type: 'Dairy',
+description: 'This product is sold only in Canada.',
+information: [
+    'Item Key: ab-evabw213',
+    'UPC: 0 22652 16151 9',
+    'Ingredients: evaporated milk, disodium phosphate, sodium ascorbate (Vitamin C), carrageenan, and Vitamin D<sub>3</sub>',
+    'Pack Size: 24 cans at 370mL per can',
+    'Weight per Case: 22.0 lbs',
+    'Case Dimensions: 12 in. (L) × 9.13 in. (W) × 8 in. (H)',
+    'Case Cube: 0.507',
+    'Cases per Pallet: 90 cases',
+    'Pallet Pattern: (Ti) 15 × (Hi) 6',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of Canada / Produit de Canada',
+],
+image: 'images/products/l_bwcaem370ml.jpg'
+},
+//--------------------- Black & White Extra Creamy Evaporated Milk 13 fl. oz. ---------------------//
+{
+name: 'Black & White Extra Creamy Evaporated Milk 13 fl. oz.',
+brand: 'Black & White',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: ab-evabw213',
+    'UPC: 0 22652 16134 2',
+    'Ingredients: milk, dipotassium phosphate, carrageenan, and Vitamin D<sub>3</sub><br /><strong>Contains milk.</strong>',
+    'Pack Size: 24 cans at 13 fl. oz. per can',
+    'Weight per Tray: 26.0 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 4 in. (H)',
+    'Tray Cube: 0.50',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_bwemgold13floz.jpg'
+},
+//--------------------- Black & White Evaporated Filled Milk 12 fl. oz. ---------------------//
+{
+name: 'Black & White Evaporated Filled Milk 12 fl. oz.',
+brand: 'Black & White',
+type: 'Dairy',
+description: '',
+information: [
+    '<h3>24-count Product Information</h3>',
+    'Item Key: ab-fmblk212',
+    'UPC: 0 22652 16123 6',
+    'Ingredients: fat free milk, partially hydrogenated soybean oil, disodium phosphate, carrageenan, Vitamin A Palmitate, and Vitamin D<sub>3</sub>',
+    'Pack Size: 24 cans at 12 fl. oz. per can',
+    'Weight per Tray: 22.90 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 4 in. (H)',
+    'Tray Cube: 0.50',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+    '<h3>48-count Product Information<br />(not sold in California)</h3>',
+    'Item Key: ab-fmblk412',
+    'UPC: same as 24-count',
+    'Ingredients: same as 24-count',
+    'Pack Size: 48 cans at 12 fl. oz. per can',
+    'Weight per Case: 46.0 lbs',
+    'Case Dimensions: 18 in. (L) × 12 in. (W) × 8 in. (H)',
+    'Case Cube: 1.000',
+    'Cases per Pallet: 54 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 6',
+    'Storage: same as 24-count',
+    'Product of USA',
+],
+image: [
+    'images/products/l_bwefilledm12floz.jpg',
+    'images/products/l_bwefilledm12floz2.jpg',
+]
+},
+//--------------------- Black & White Evaporated Milk Filled 97 fl. oz. ---------------------//
+{
+name: 'Black & White Evaporated Milk Filled 97 fl. oz.',
+brand: 'Black & White',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: ab-fmblk97z',
+    'UPC: 0 22652 16124 3',
+    'Ingredients: skim milk, partially hydrogenated soybean oil, disodium phosphate, carrageenan, Vitamin A Palmitate, and Vitamin D<sub>3</sub>',
+    'Pack Size: 6 cans at 97 fl. oz. per can',
+    'Weight per Case: 45.25 lbs',
+    'Case Dimensions: 19 in. (L) × 12.5 in. (W) × 7.5 in. (H)',
+    'Case Cube: 1.031',
+    'Case per Pallet: 56 cases',
+    'Pallet Pattern: (Ti) 8 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_bwefilledm97floz.jpg'
+},
+//--------------------- Black & White Sweetened Condensed Milk 14 oz. (USA) ---------------------//
+{
+name: 'Black & White Sweetened Condensed Milk 14 oz. (USA)',
+brand: 'Black & White',
+type: 'Dairy',
+description: 'This product is sold only in the USA.',
+information: [
+    'Item Key: aa-scmblk24',
+    'UPC: 0 22652 16102 1',
+    'Ingredients: milk and sugar',
+    'Pack Size: 24 cans at 14 oz. per can',
+    'Weight per Tray: 23.90 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.406',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_bwscm14oz.jpg'
+},
+//--------------------- Black & White Sweetened Condensed Milk 300mL (Canada) ---------------------//
+{
+name: 'Black & White Sweetened Condensed Milk 300mL (Canada)',
+brand: 'Black & White',
+type: 'Dairy',
+description: 'This product is sold only in Canada.',
+information: [
+    'Item Key: aa-scmblk24',
+    'UPC: 0 22652 16102 1',
+    'Ingredients: evaporated milk, liquid sugar, and lactose',
+    'Pack Size: 24 cans at 300mL per can',
+    'Weight per Tray: 25.0 lbs',
+    'Tray Dimensions: 12.25 in. (L) × 9.25 in. (W) × 7 in. (H)',
+    'Tray Cube: 0.459',
+    'Trays per Pallet: 105 trays',
+    'Pallet Pattern: (Ti) 15 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of Canada / Produit de Canada',
+],
+image: 'images/products/l_bwcascm14oz.jpg'
+},
+//--------------------- Black & White Sweetened Condensed Filled Milk 14 oz. ---------------------//
+{
+name: 'Black & White Sweetened Condensed Filled Milk 14 oz.',
+brand: 'Black & White',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-fcmblk24',
+    'UPC: 0 22652 16112 0',
+    'Ingredients: nonfat milk, sugar, palm oil, Vitamin A Palmitate, and riboflavin',
+    'Pack Size: 24 cans at 14 oz. per can',
+    'Weight per Tray: 23.55 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.406',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_bwscfilledm14oz.jpg'
+},
+//--------------------- Black & White Full Cream Sweetened Condensed Milk 8 lbs 12 oz. ---------------------//
+{
+name: 'Black & White Full Cream Sweetened Condensed Milk 8 lbs 12 oz.',
+brand: 'Black & White',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-scmblkla',
+    'UPC: 0 22652 16001 7',
+    'Ingredients: concentrated whole milk and sugar',
+    'Pack Size: 6 cans at 8 lbs 12 oz. per can',
+    'Weight per Case: 57.55 lbs',
+    'Case Dimensions: 19 in. (L) × 12.75 in. (W) × 7.5 in. (H)',
+    'Case Cube: 1.051',
+    'Cases per Pallet: 48 cases',
+    'Pallet Pattern: (Ti) 8 × (Hi) 6',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_bwscm8lb12oz.jpg'
+},
+//--------------------- Parrot Brand Sweetened Condensed Filled Milk 14 oz. ---------------------//
+{
+name: 'Parrot Brand Sweetened Condensed Filled Milk 14 oz.',
+brand: 'Parrot',
+type: 'Dairy',
+description: 'Visit the Parrot Brand website <a target="_blank" href="http://www.parrotbrandusa.com">www.parrotbrandusa.com</a>.',
+information: [
+    'Item Key: aa-fcmpa024',
+    'UPC: 0 22652 16103 8',
+    'Ingredients: nonfat milk, sugar, palm oil, Vitamin A Palmitate, and riboflavin',
+    'Pack Size: 24 cans at 14 oz. per can',
+    'Weight per Tray: 23.55 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.406',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_parfilledscmwhit14oz.jpg'
+},
+//--------------------- Parrot Brand Evaporated Milk Filled 12 fl. oz. ---------------------//
+{
+name: 'Parrot Brand Evaporated Milk Filled 12 fl. oz.',
+brand: 'Parrot',
+type: 'Dairy',
+description: 'Visit the Parrot Brand website <a target="_blank" href="http://www.parrotbrandusa.com">www.parrotbrandusa.com</a>.',
+information: [
+    'Item Key: ab-fmpar12z',
+    'UPC: 0 22652 16117 5',
+    'Ingredients: fat free milk, partially hydrogenated soybean oil, disodium phosphate, carrageenan, Vitamin A Palmitate, and Vitamin D<sub>3</sub><br /><strong>Contains milk and soy.</strong>',
+    'Pack Size: 2 trays of 12 cans at 12 fl. oz. per can',
+    'Weight per Case: 45.80 lbs',
+    'Case Dimensions: 18 in. (L) × 12 in. (W) × 8 in. (H)',
+    'Case Cube: 1.000',
+    'Cases per Pallet: 54 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 6',
+    'Storage: Please keep refrigerated after opening. Shelf Life: 9 months',
+    'Product of USA',
+],
+image: 'images/products/l_parevapfilledm12floz.jpg'
+},
+//--------------------- Cow & Mill Evaporated Milk 97 fl. oz. ---------------------//
+{
+name: 'Cow & Mill Evaporated Milk 97 fl. oz.',
+brand: 'Cow & Mill',
+type: 'Dairy',
+description: 'No preservatives; use in tea, coffee, hot chocolate, with cereals, desserts, fruits, cooking, baking, and milk drinks.',
+information: [
+    'Item Key: ab-evapcmla',
+    'UPC: 0 22652 16119 9',
+    'Ingredients: milk, dipotassium phosphate, carrageenan, and Vitamin D<sub>3</sub>',
+    'Pack Size: 6 cans at 97 fl. oz. per can',
+    'Weight per Case: 45.30 lbs',
+    'Case Dimensions: 19 in. (L) × 12.5 in. (W) × 7.5 in. (H)',
+    'Case Cube: 1.031',
+    'Cases per Pallet: 56 cases',
+    'Pallet Pattern: (Ti) 8 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: [
+    'images/products/l_cmem97floz.jpg',
+    'images/products/l_cmem97floz2.jpg',
+]
+},
+//--------------------- Cow & Mill Evaporated Milk Filled 12 fl. oz. ---------------------//
+{
+name: 'Cow & Mill Evaporated Milk Filled 12 fl. oz.',
+brand: 'Cow & Mill',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: ab-fmcnm412',
+    'UPC: 0 22652 16116 8',
+    'Ingredients: fat free milk, partially hydrogenated soybean oil, disodium phosphate, carrageenan, Vitamin A Palmitate, and Vitamin D<sub>3</sub><br /><strong>Contains milk and soy.</strong>',
+    'Pack Size: 2 trays of 12 cans at 12 fl. oz. per can',
+    'Weight per Case: 45.80 lbs',
+    'Case Dimensions: 18 in. (L) × 12 in. (W) × 8 in. (H)',
+    'Case Cube: 1.000',
+    'Cases per Pallet: 54 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 6',
+    'Storage: Please keep refrigerated after opening. Shelf Life: 9 months',
+    'Product of USA',
+],
+image: [
+    'images/products/l_cmefilledm12floz.jpg',
+    'images/products/l_cmefilledm12floz2.jpg',
+]
+},
+//--------------------- Cow & Mill Sweetened Condensed Creamer 13.4 oz. ---------------------//
+{
+name: 'Cow & Mill Sweetened Condensed Creamer 13.4 oz.',
+brand: 'Cow & Mill',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-pfmcm380',
+    'UPC: 0 22652 16090 1',
+    'Ingredients: whey, nonfat milk, sugar, and palm oil<br /><strong>Contains milk. May contain traces of soy.</strong>',
+    'Pack Size: 48 cans at 13.4 fl. oz. per can',
+    'Weight per Case: 45.85 lbs',
+    'Case Dimensions: 18 in. (L) × 12 in. (W) × 6.25 in. (H)',
+    'Case Cube: 0.781',
+    'Cases per Pallet: 54 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 6',
+    'Storage: Please keep refrigerated after opening. Shelf Life: 12 months',
+    'Product of Singapore',
+],
+image: [
+    'images/products/l_cmcream13-4oz.jpg',
+    'images/products/l_cmcream13-4oz2.jpg',
+]
+},
+//--------------------- Dairy Girl Sweetened Condensed Filled Milk 14 oz. ---------------------//
+{
+name: 'Dairy Girl Sweetened Condensed Filled Milk 14 oz.',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-fcmdyg24',
+    'UPC: 0 22652 16110 6',
+    'Ingredients: nonfat milk, sugar, palm oil, Vitamin A Palmitate, and riboflavin',
+    'Pack Size: 24 cans at 14 oz. per can',
+    'Weight per Tray: 23.55 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.406',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_dgfcm14oz.jpg'
+},
+//--------------------- Dairy Girl Sweetened Condensed Filled Milk 8 lbs 12 oz. ---------------------//
+{
+name: 'Dairy Girl Sweetened Condensed Filled Milk 8 lbs 12 oz.',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-fcmdygla',
+    'UPC: 0 22652 16006 2',
+    'Ingredients: skim milk, sugar, and palm oil',
+    'Pack Size: 6 cans at 8 lbs 12 oz. per can',
+    'Weight per Case: 57.45 lbs',
+    'Case Dimensions: 19 in. (L) × 12.75 in. (W) × 7.5 in. (H)',
+    'Case Cube: 1.051',
+    'Cases per Pallet: 49 cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: [
+    'images/products/l_dgfcm8lbs12oz.jpg',
+    'images/products/l_dgfcm8lbs12oz2.jpg',
+]
+},
+//--------------------- Dairy Girl Sweetened Condensed Filled Milk with Bag 50 lbs ---------------------//
+{
+name: 'Dairy Girl Sweetened Condensed Filled Milk with Bag 50 lbs',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-fcpdg50p',
+    'UPC: 0 22652 16129 8',
+    'Ingredients: skim milk, sugar, and palm oil',
+    'Pack Size: 1 pail at 50 lbs',
+    'Pail Dimensions: 12 in. (D) × 15 in. (H)',
+    'Pail Cube: 1.183',
+    'Pails per Pallet: 36 pails',
+    'Pallet Pattern: (Ti) 12 × (Hi) 3',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_dgfcmbag50lbs.jpg'
+},
+//--------------------- Dairy Girl Full Cream Sweetened Condensed Milk 8 lbs 12 oz. ---------------------//
+{
+name: 'Dairy Girl Full Cream Sweetened Condensed Milk 8 lbs 12 oz.',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-scmdygla',
+    'UPC: 0 22652 16003 1',
+    'Ingredients: concentrated whole milk and sugar',
+    'Pack Size: 6 cans at 140 oz. per can',
+    'Weight per Case: 58.15 lbs',
+    'Case Dimensions: 18.75 in. (L) × 12.75 in. (W) × 7.5 in. (H)',
+    'Case Cube: 1.038',
+    'Cases per Pallet: 49 cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: [
+    'images/products/l_dgfcscm8lb12oz.jpg',
+    'images/products/l_dgfcscm8lb12oz2.jpg',
+]
+},
+//--------------------- Dairy Girl Sweetened Condensed Milk with Bag 50 lbs ---------------------//
+{
+name: 'Dairy Girl Sweetened Condensed Milk with Bag 50 lbs',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-tdga050p',
+    'UPC: 0 22652 16004 8',
+    'Ingredients: milk and sugar<br /><strong>Contains milk.</strong>',
+    'Pack Size: 1 pail at 50 lbs',
+    'Weight per Pail: 52.35 lbs',
+    'Pail Dimensions: 12 in. (D) × 15 in. (H)',
+    'Pail Cube: 1.183',
+    'Pails per Pallet: 36 pails',
+    'Pallet Pattern: (Ti) 12 × (Hi) 3',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA',
+],
+image: 'images/products/l_dgfcscm50lbs.jpg'
+},
+//--------------------- Dairy Girl Evaporated Filled Milk 12 fl. oz. ---------------------//
+{
+name: 'Dairy Girl Evaporated Filled Milk 12 fl. oz.',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: ab-fmdyg212',
+    'UPC: 0 22652 16128 1',
+    'Ingredients: fat free milk, partially hydrogenated soybean oil, disodium phosphate, carrageenan, Vitamin A Palmitate, and Vitamin D<sub>3</sub><br /><strong>Contains milk and soy.</strong>',
+    'Pack Size: 24 cans at 12 fl. oz. per can',
+    'Weight per Tray: 22.90 lbs',
+    'Tray Dimensions: 18 in. (L) × 12 in. (W) × 4 in. (H)',
+    'Tray Cube: 0.50',
+    'Trays per Pallet: 108 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 12',
+    'Product of USA',
+],
+image: 'images/products/l_dgefilledm12floz.jpg'
+},
+//--------------------- Dairy Girl Evaporated Filled Milk 97 fl. oz. ---------------------//
+{
+name: 'Dairy Girl Evaporated Filled Milk 97 fl. oz.',
+brand: 'Dairy Girl',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: ab-fmdyg97z',
+    'UPC: 0 22652 16127 4',
+    'Ingredients: fat free milk, partially hydrogenated soybean oil, disodium phosphate, carrageenan, Vitamin A Palmitate, and Vitamin D<sub>3</sub>',
+    'Pack Size: 6 cans at 97 fl. oz. per can',
+    'Weight per Case: 45.30 lbs',
+    'Case Dimensions: 19 in. (L) × 12.5 in. (W) × 7.5 in. (H)',
+    'Case Cube: 1.031',
+    'Cases per Pallet: 56 cases',
+    'Pallet Pattern: (Ti) 8 × (Hi) 7',
+    'Product of USA',
+],
+image: [
+    'images/products/l_dgefilledm97floz.jpg',
+    'images/products/l_dgefilledm97floz2.jpg',
+]
+},
+//--------------------- Hoa Lan Sweetened Condensed Filled Milk 13.6 oz. ---------------------//
+{
+name: 'Hoa Lan Sweetened Condensed Filled Milk 13.6 oz.',
+brand: 'Hoa Lan',
+type: 'Dairy',
+description: '',
+information: [
+    'Item Key: aa-pfmhl048',
+    'UPC: 0 22652 16092 5',
+    'Ingredients: skim milk, sugar, palm oil, and Vitamin A Palmitate',
+    'Pack Size: 48 cans at 13.6 oz. per can',
+    'Weight per Tray: 48.00 lbs',
+    'Case Dimensions: 18 in. (L) × 12 in. (W) × 6.5 in. (H)',
+    'Case Cube: 0.813',
+    'Cases per Pallet: 54 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 6',
+    'Storage: Keep in cool, dry place.',
+    'Product of Singapore',
+],
+image: 'images/products/l_hlscfilledm13-6oz.jpg'
+},
+//--------------------- Falcon Sweetened Condensed Milk 300mL (Canada) ---------------------//
+{
+name: 'Falcon Sweetened Condensed Milk 300mL (Canada)',
+brand: 'Falcon',
+type: 'Dairy',
+description: 'This product is sold only in Canada.<br />No need for a can opener. This container uses an “easy open” tab.',
+information: [
+    'Item Key: aa-scmfalco',
+    'UPC: 0 22652 16113 7',
+    'Ingredients: evaporated milk, liquid sugar, and lactose',
+    'Pack Size: 24 cans at 300mL per can',
+    'Weight per Tray: 25.0 lbs',
+    'Tray Dimensions: 12.25 in. (L) × 9.25 in. (W) × 7 in. (H)',
+    'Tray Cube: 0.459',
+    'Trays per Pallet: 105 trays',
+    'Pallet Pattern: (Ti) 15 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of Canada / Produit de Canada',
+],
+image: 'images/products/l_falscm14oz.jpg'
+},
 //--------------------- End of Products ---------------------//
 
 ];
