@@ -1005,7 +1005,7 @@ image: 'images/products/l_parcreamedcoco97oz.jpg'
 //--------------------- Longevity Brand (Café Ông Thọ) Premium Dark French Roast Ground Coffee 12 oz. ---------------------//
 {
 name: 'Longevity Brand (Café Ông Thọ) Premium Dark French Roast Ground Coffee 12 oz.',
-brand: 'Longevity Brand',
+brand: 'Cafe Longevity',
 type: 'Coffee',
 description: 'This dark French roast ground coffee is a blend of the finest quality coffee beans. Their rich flavor and distinctive armona have been particularly formulated for a single cup, drip coffee similar to that of Ban Mê Thuột coffee.<br /><br />For the ideal companion, serve with <a href="#page=products&product=Longevity%20Brand%20Sweetened%20Condensed%20Milk%20Gold%2014%20oz.">Longevity Brand Full Cream Sweetened Condensed Milk.</a>',
 information: [
@@ -1036,7 +1036,7 @@ image: 'images/products/l_longcoffeefilt.jpg'
 //--------------------- Coffee Gift Set ---------------------//
 {
 name: 'Coffee Gift Set',
-brand: 'Longevity Brand',
+brand: 'Cafe Longevity',
 type: 'Coffee',
 description: 'The gift set contains:<br /><ol><li><a>12 oz. Longevity Brand Premium Dark French Roast Ground Coffee</a></li><li><a>14 oz. Longevity Brand Full Cream Sweetened Condensed Milk Gold</a></li><li><a>Vietnamese Coffee Filter</a></li></ol>Combine the coffee with sweetened condensed milk to make a <a href="#page=recipes&recipe=Vietnamese%20Coffee">delicious iced coffee drink</a>. Even those who drink their coffee black will like this.',
 information: [
@@ -1057,7 +1057,7 @@ image: 'images/products/l_long3in1gift.jpg'
 //--------------------- Café Longevity Extra Dark Roast Ground Coffee 12 oz. ---------------------//
 {
 name: 'Café Longevity Extra Dark Roast Ground Coffee 12 oz.',
-brand: 'Longevity Brand',
+brand: 'Cafe Longevity',
 type: 'Coffee',
 description: '',
 information: [
@@ -1651,6 +1651,822 @@ information: [
     'Product of Canada / Produit de Canada',
 ],
 image: 'images/products/l_falscm14oz.jpg'
+},
+//--------------------- Flower Brand Dried Shiitake Mushroom 5 lbs, 3–4 cm ---------------------//
+{
+name: 'Flower Brand Dried Shiitake Mushroom 5 lbs, 3–4 cm',
+brand: 'Flower Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-s03a25p8',
+    'UPC: 0 22652 19852 2',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 8 bags at 5 lbs per bag',
+    'Weight per Case: 45.0 lbs',
+    'Case Dim.: 22.625 in. (L) × 18.125 in. (W) × 18.25 in. (H)',
+    'Case Cube: 4.341',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_flwrdmsw4cm5lbs.jpg'
+},
+//--------------------- Flower Brand Dried Shiitake Mushroom 5 lbs, 4–5 cm ---------------------//
+{
+name: 'Flower Brand Dried Shiitake Mushroom 5 lbs, 4–5 cm',
+brand: 'Flower Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-s03a15p7',
+    'UPC: 0 22652 19851 5',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 7 bags at 5 lbs per bag',
+    'Weight per Case: 40.0 lbs',
+    'Case Dimensions: 22 in. (L) × 17.5 in. (W) × 18 in. (H)',
+    'Case Cube: 4.010',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_flwrdmsw5cm5lbs.jpg'
+},
+//--------------------- Flower Brand Dried Shiitake Mushroom Whole 5 lbs, 3–4 cm ---------------------//
+{
+name: 'Flower Brand Dried Shiitake Mushroom Whole 5 lbs, 3–4 cm',
+brand: 'Flower Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-s010b5p7',
+    'UPC: 0 22652 19854 6',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 7 bags at 5 lbs per bag',
+    'Weight per Case: 40.0 lbs',
+    'Case Dim.: 22.25 in. (L) × 18.125 in. (W) × 19.25 in. (H)',
+    'Case Cube: 4.493',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_flwrdmwhl4cm5lbs.jpg'
+},
+//--------------------- Flower Brand Dried Shiitake Mushroom Whole 5 lbs, 4–5 cm ---------------------//
+{
+name: 'Flower Brand Dried Shiitake Mushroom Whole 5 lbs, 4–5 cm',
+brand: 'Flower Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-s009b5p6',
+    'UPC: 0 22652 19855 3',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 6 bags at 5 lbs per bag',
+    'Weight per Case: 35.0 lbs',
+    'Case Dim.: 22.25 in. (L) × 18.125 in. (W) × 19.25 in. (H)',
+    'Case Cube: 4.493',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_flwrdmwhl5cm5lbs.jpg'
+},
+//--------------------- Fortune Dried Black Fungus Whole 4 oz. ---------------------//
+{
+name: 'Fortune Dried Black Fungus Whole 4 oz.',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-abflm504',
+    'UPC: 0 22652 20696 8',
+    'Ingredient: dried black fungus',
+    'Pack Size: 50 bags at 4 oz. per bag',
+    'Weight per Case: 17.0 lbs',
+    'Case Dimensions: 19.5 in. (L) × 18 in. (W) × 17.25 in. (H)',
+    'Case Cube: 3.504',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fordfunwhlblk4oz.jpg'
+},
+//--------------------- Fortune Dried Black Fungus Whole 5 lbs ---------------------//
+{
+name: 'Fortune Dried Black Fungus Whole 5 lbs',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-abfwl5p5',
+    'UPC: 0 22652 20697 5',
+    'Ingredient: dried black fungus',
+    'Pack Size: 5 bags at 5 lbs per bag',
+    'Weight per Case: 30.0 lbs',
+    'Case Dimensions: 23 in. (L) × 17.5 in. (W) × 22.375 in. (H)',
+    'Case Cube: 5.212',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fordfunwhlblk5lbs.jpg'
+},
+//--------------------- Fortune Dried Black Fungus Shredded 4 oz. ---------------------//
+{
+name: 'Fortune Dried Black Fungus Shredded 4 oz.',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-dbfsm504',
+    'UPC: 0 22652 20694 4',
+    'Ingredient: dried black fungus',
+    'Pack Size: 50 bags at 4 oz. per bag',
+    'Weight per Case: 17.0 lbs',
+    'Case Dimensions: 19.75 in. (L) × 15 in. (W) × 14.75 in. (H)',
+    'Case Cube: 2.529',
+    'Cases per Pallet: 35 cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 5',
+],
+image: 'images/products/l_fordfunshrdblk4oz.jpg'
+},
+//--------------------- Fortune Dried Black Fungus Shredded 5 lbs ---------------------//
+{
+name: 'Fortune Dried Black Fungus Shredded 5 lbs',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-dbfsm5p6',
+    'UPC: 0 22652 206951',
+    'Ingredient: dried black fungus',
+    'Pack Size: 6 bags at 5 lbs per bag',
+    'Weight per Case: 35.0 lbs',
+    'Case Dimensions: 23 in. (L) × 14.5 in. (W) × 19.75 in. (H)',
+    'Case Cube: 3.812',
+    'Cases per Pallet: 28 cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 4',
+],
+image: 'images/products/l_fordfunshrdblk5lbs.jpg'
+},
+//--------------------- Fortune Dried Cloud Ear Fungus 2.5 oz. ---------------------//
+{
+name: 'Fortune Dried Cloud Ear Fungus 2.5 oz.',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-bce02502',
+    'UPC: 0 22652 20702 6',
+    'Ingredient: dried cloud ear fungus',
+    'Pack Size: 50 bags at 2.5 oz. per bag',
+    'Weight per Case: 13.0 lbs',
+    'Case Dimensions: 20.75 in. (L) × 17.75 in. (W) × 10 in. (H)',
+    'Case Cube: 2.131',
+    'Cases per Pallet: 30 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 6',
+],
+image: 'images/products/l_fordfuncloudearwhl2-5oz.jpg'
+},
+//--------------------- Fortune Dried Cloud Ear Fungus 5 lbs ---------------------//
+{
+name: 'Fortune Dried Cloud Ear Fungus 5 lbs',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-bce025p6',
+    'UPC: 0 22652 20707 1',
+    'Ingredient: dried cloud ear fungus',
+    'Pack Size: 6 cloth bags at 5 lbs per bag',
+    'Weight per Case: 35.0 lbs',
+    'Case Dimensions: 22 in. (L) × 17.75 in. (W) × 18.75 in. (H)',
+    'Case Cube: 4.237',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fordfuncloudearwhl5lbs.jpg'
+},
+//--------------------- Fortune Dried Straw Mushroom 5 lbs ---------------------//
+{
+name: 'Fortune Dried Straw Mushroom 5 lbs',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-ax00a5p6',
+    'UPC: 0 22652 20451 3',
+    'Ingredient: dried straw mushroom',
+    'Pack Size: 6 bags at 5 lbs per bag',
+    'Weight per Case: 35.0 lbs',
+    'Case Dim.: 19.25 in. (L) × 17.75 in. (W) × 22.75 in. (H)',
+    'Case Cube: 4.498',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fordm5lbs.jpg'
+},
+//--------------------- Fortune Dried Shiitake Mushroom 5 lbs, 4–5 cm ---------------------//
+{
+name: 'Fortune Dried Shiitake Mushroom 5 lbs, 4–5 cm',
+brand: 'Fortune',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-akklm5p6',
+    'UPC: 0 22652 19859 1',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 6 bags at 5 lbs per bag',
+    'Weight per Case: 35.0 lbs',
+    'Case Dimensions: 21.625 in. (L) × 18 in. (W) × 27.5 in. (H)',
+    'Case Cube: 6.195',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fordmsw5cm5lbs.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom 6 oz., 4–5 cm ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom 6 oz., 4–5 cm',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-ff0la406',
+    'UPC: 0 22652 19984 0',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 40 bags at 6 oz. per bag',
+    'Weight per Case: 19.0 lbs',
+    'Case Dimensions: 22.75 in. (L) × 18.25 in. (W) × 16 in. (H)',
+    'Case Cube: 3.844',
+    'Trays per Pallet: 25 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 5',
+],
+image: 'images/products/l_fuydmwhl6oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom 14 oz., 4–5 cm ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom 14 oz., 4–5 cm',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: 'This packaging is resealable.',
+information: [
+    'Item Key: ba-s0093014',
+    'UPC: 0 22652 19981 9',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 30 bags at 14 oz. per bag',
+    'Weight per Case: 31.0 lbs',
+    'Case Dimensions: 22.5 in. (L) × 18.25 in. (W) × 21 in. (H)',
+    'Case Cube: 4.990',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmwhl14oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushrooms 16 oz., 4–5 cm ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushrooms 16 oz., 4–5 cm',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-ak0091p8',
+    'UPC: 0 22652 20131 4',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 8 jars at 16 oz. per jar',
+    'Weight per Case: 13.0 lbs',
+    'Case Dimensions: 21.5 in. (L) × 13.25 in. (W) × 11 in. (H)',
+    'Case Cube: 1.813',
+    'Cases per Pallet: 56 cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 8',
+],
+image: [
+    'images/products/l_fuydmshiitakejar16oz.jpg',
+    'images/products/l_fuydmshiitakejar16oz2.jpg',
+]
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom Sliced 3 oz. ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom Sliced 3 oz.',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-g0sli603',
+    'UPC: 0 22652 20321 9',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 60 bags at 3 oz. per bag',
+    'Weight per Case: 16.25 lbs',
+    'Case Dimensions: 24.375 in. (L) × 18 in. (W) × 17.5 in. (H)',
+    'Case Cube: 4.443',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmslaaa3oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom Whole 3 oz., 3–4 cm ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom Whole 3 oz., 3–4 cm',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-ffkla603',
+    'UPC: 0 22652 19987 1',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 60 bags at 3 oz. per bag',
+    'Weight per Case: 16.25 lbs',
+    'Case Dimensions: 19.5 in. (L) × 18.125 in. (W) × 17 in. (H)',
+    'Case Cube: 3.477',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmwhl3oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Mushroom Whole in Gift Box 16 oz. ---------------------//
+{
+name: 'Fuyuki Brand Dried Mushroom Whole in Gift Box 16 oz.',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-sg3a1301',
+    'UPC: 0 22652 20081 2',
+    'Ingredient: dried mushroom',
+    'Pack Size: 30 boxes at 16 oz. per box',
+    'Weight per Case: 35.0 lbs',
+],
+image: 'images/products/l_fuydmwhlgift16oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom Whole in Red Gift Box 16 oz., 4–5 cm ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom Whole in Red Gift Box 16 oz., 4–5 cm',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-sg3a1281',
+    'UPC: 0 22652 20082 9',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 28 boxes at 16 oz. per box',
+    'Weight per Case: 33.0 lbs',
+    'Case Dim.: 26.75 in. (L) × 18.75 in. (W) × 17.125 in. (H)',
+    'Case Cube: 4.971',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmwhlgiftred16oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom Sliced 6 oz., AAA Grade ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom Sliced 6 oz., AAA Grade',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-g0sli406',
+    'UPC: 0 22652 20323 3',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 40 bags at 6 oz. per bag',
+    'Weight per Case: 20.0 lbs',
+    'Case Dim.: 21.5 in. (L) × 18 in. (W) × 21 in. (H)',
+    'Case Cube: 4.703',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmslaaa6oz.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom Sliced 5 lbs, AAA Grade ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom Sliced 5 lbs, AAA Grade',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-g0sli5p4',
+    'UPC: 0 22652 20231 1',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 4 bags at 5 lbs per bag',
+    'Weight per Case: 25.0 lbs',
+    'Case Dim.: 23.25 in. (L) × 16.25 in. (W) × 22.5 in. (H)',
+    'Case Cube: 4.919',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmslgrn5lbs.jpg'
+},
+//--------------------- Fuyuki Brand Dried Shiitake Mushroom Sliced 5 lbs, A Grade ---------------------//
+{
+name: 'Fuyuki Brand Dried Shiitake Mushroom Sliced 5 lbs, A Grade',
+brand: 'Fuyuki Brand',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: ba-g0sla5p4',
+    'UPC: 0 22652 20232 8',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 4 bags at 5 lbs per bag',
+    'Weight per Case: 25.0 lbs',
+    'Case Dimensions: 21.5 in. (L) × 18 in. (W) × 21 in. (H)',
+    'Case Cube: 4.703',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_fuydmsl5lbs.jpg'
+},
+//--------------------- Beauty Brand Dried Yellow Fungus Whole 5.3 oz. ---------------------//
+{
+name: 'Beauty Brand Dried Yellow Fungus Whole 5.3 oz.',
+brand: 'Beauty',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-cgfu3015',
+    'UPC: 0 22652 20686 9',
+    'Ingredient: dried yellow fungus',
+    'Pack Size: 30 bags at 5.3 oz. per bag',
+    'Weight per Case: 15.0 lbs',
+    'Case Dim.: 20.5 in. (L) × 17.75 in. (W) × 16 in. (H)',
+    'Case Cube: 3.369',
+    'Cases per Pallet: 25 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 5',
+],
+image: 'images/products/l_beadfunwhlyel5-3oz.jpg'
+},
+//--------------------- Beauty Brand Dried Yellow Fungus Whole 4.4 lbs ---------------------//
+{
+name: 'Beauty Brand Dried Yellow Fungus Whole 4.4 lbs',
+brand: 'Beauty',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-chyel2k4',
+    'UPC: 0 22652 20710 1',
+    'Ingredient: dried yellow fungus',
+    'Pack Size: 4 bags at 4.4 lbs per bag',
+    'Weight per Case: 22.0 lbs',
+    'Case Dim.: 22.25 in. (L) × 13.75 in. (W) × 17.5 in. (H)',
+    'Case Cube: 3.098',
+    'Cases per Pallet: 28 cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 4',
+],
+image: 'images/products/l_beadfunwhlyel4-4lbs.jpg'
+},
+//--------------------- Beauty Brand Dried Yellow Fungus Whole 8.8 lbs ---------------------//
+{
+name: 'Beauty Brand Dried Yellow Fungus Whole 8.8 lbs',
+brand: 'Beauty',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-cgsfu04k',
+    'UPC: 0 22652 20709 5',
+    'Ingredient: dried yellow fungus',
+    'Pack Size: 1 bag at 8.8 lbs',
+    'Weight per Bag: 13.0 lbs',
+    'Bag Dim.: 23.5 in. (L) × 17.75 in. (W) × 14.25 in. (H)',
+    'Bag Cube: 3.440',
+    'Bags per Pallet: 30 bags',
+    'Pallet Pattern: (Ti) 5 × (Hi) 6',
+],
+image: 'images/products/l_beadfunwhlyel8-8lbs.jpg'
+},
+//--------------------- Beauty Brand Dried Yellow Fungus Cut 2.2 lbs ---------------------//
+{
+name: 'Beauty Brand Dried Yellow Fungus Cut 2.2 lbs',
+brand: 'Beauty',
+type: 'Fungus',
+description: '',
+information: [
+    'Item Key: bf-cscut1k8',
+    'UPC: 0 22652 20711 8',
+    'Ingredient: dried yellow fungus',
+    'Pack Size: 8 bags at 2.2 lbs per bag',
+    'Weight per Case: 22.0 lbs',
+    'Case Dim.: 22.75 in. (L) × 17.875 in. (W) × 22.5 in. (H)',
+    'Case Cube: 5.295',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_beadfuncutyel2-2lbs.jpg'
+},
+//--------------------- Beauty Brand Dried Shiitake Mushroom Whole 14 oz., 3–4 cm ---------------------//
+{
+name: 'Beauty Brand Dried Shiitake Mushroom Whole 14 oz., 3–4 cm',
+brand: 'Beauty',
+type: 'Fungus',
+description: 'This packaging is resealable.',
+information: [
+    'Item Key: ba-s10c3014',
+    'UPC: 0 22652 20001 0',
+    'Ingredient: dried shiitake mushroom',
+    'Pack Size: 30 bags at 14 oz. per bag',
+    'Weight per Case: 31.0 lbs',
+    'Case Dimensions: 22.5 in. (L) × 17.5 in. (W) × 21.25 in. (H)',
+    'Case Cube: 4.842',
+    'Cases per Pallet: 20 cases',
+    'Pallet Pattern: (Ti) 5 × (Hi) 4',
+],
+image: 'images/products/l_beadmwhl14oz.jpg'
+},
+//--------------------- Parrot Brand Corned Beef with Natural Juices 12 oz. (New York) ---------------------//
+{
+name: 'Parrot Brand Corned Beef with Natural Juices 12 oz. (New York)',
+brand: 'Parrot',
+type: 'Meat',
+description: 'This product is sold only in New York.<br />Visit the Parrot Brand website <a target="_blank" href="http://www.parrotbrandusa.com">www.parrotbrandusa.com</a>.',
+information: [
+    'Item Key: eb-cvparrot',
+    'UPC: 0 22652 18041 1',
+    'Ingredients: cooked beef, beef, water, salt, sugar, and sodium nitrite',
+    'Pack Size: 24 cans at 12 oz. per can',
+    'Weight per Case: 22.80 lbs',
+    'Case Dimensions: 13 in. (L) × 7.5 in. (W) × 7.5 in. (H)',
+    'Case Cube: 0.423',
+    'Cases per Pallet: 108 cases',
+    'Pallet Pattern: (Ti) 18 × (Hi) 6',
+],
+image: 'images/products/l_parcornedbeef12oz.jpg'
+},
+//--------------------- Flower Brand Liver Pâté 2.75 oz. ---------------------//
+{
+name: 'Flower Brand Liver Pâté 2.75 oz.',
+brand: 'Flower Brand',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-boflw27z',
+    'UPC: 0 22652 18007 7',
+    'Ingredients: water, pork liver, pork fat, pork, wheat flour (wheat flour, niacin, thiamine mononitrate, riboflavin, reduced iron, and folic acid), salt, sugar, gelatin, onion powder, spices, and sodium nitrite',
+    'Pack Size: 24 cans at 2.75 oz. per can',
+    'Weight per Tray: 5.60 lbs',
+    'Tray Dimensions: 11 in. (L) × 8 in. (W) × 2 in. (H)',
+    'Tray Cube: 0.102',
+    'Trays per Pallet: 440 trays',
+    'Pallet Pattern: (Ti) 22 × (Hi) 20',
+],
+image: 'images/products/l_flwrliverpate2-75oz.jpg'
+},
+//--------------------- Flower Brand Liver Pâté 4.76 oz. ---------------------//
+{
+name: 'Flower Brand Liver Pâté 4.76 oz.',
+brand: 'Flower Brand',
+type: 'Meat',
+description: 'No need for a can opener. This container uses an “easy open” tab.',
+information: [
+    'Item Key: eb-boflo135',
+    'UPC: 0 22652 18010 7',
+    'Ingredients: water, pork liver, pork fat, pork, wheat flour (wheat flour, niacin, thiamine mononitrate, riboflavin, reduce iron, folic acid), salt, sugar, gelatin, onion powder, spices, and sodium nitrite',
+    'Pack Size: 24 cans at 4.76 oz. per can',
+    'Weight per Tray: 9.30 lbs',
+    'Tray Dimensions: 16 in. (L) × 10.75 in. (W) × 2 in. (H)',
+    'Tray Cube: 0.199',
+    'Trays per Pallet: 198 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 22',
+],
+image: 'images/products/l_flwrliverpate4-76oz.jpg'
+},
+//--------------------- Fortune Hot Spiced Minced Pork & Binder Product 4.6 oz. ---------------------//
+{
+name: 'Fortune Hot Spiced Minced Pork & Binder Product 4.6 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-bof18062',
+    'UPC: 0 22652 18062 6',
+    'Ingredients: pork, water, hydrolyzed soy protein, spices and spice extracts, soy protein concentrate, contains less than 2% of dehydrated garlic, soy protein isolate, salt, white vinegar, annatto color, and monoglycerides.<br /><strong>Contains soy.</strong>',
+    'Pack Size: 24 cans at 4.6 oz. per can',
+    'Weight per Case: 8.85 lbs',
+    'Case Dimensions: 16 in. (L) × 10.75 in. (W) × 2 in. (H)',
+    'Case Cube: 0.199',
+    'Cases per Pallet: 198 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 22',
+],
+image: 'images/products/l_forporkhts4-6oz.jpg'
+},
+//--------------------- Fortune Spiced Minced Pork & Binder Product 4.6 oz. ---------------------//
+{
+name: 'Fortune Spiced Minced Pork & Binder Product 4.6 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-bof18061',
+    'UPC: 0 22652 18061 9',
+    'Ingredients: pork, water, hydrolyzed soy protein, soy protein concentrate, contains less than 2% of dehydrated garlic, soy protein isolate, spices and spice extracts, salt, white veingar, annatto color, and monoglycerides.<br /><strong>Contains soy.</strong>',
+    'Pack Size: 24 cans at 4.6 oz. per can',
+    'Weight per Case: 8.85 lbs',
+    'Case Dimensions: 16 in. (L) × 10.75 in. (W) × 2 in. (H)',
+    'Case Cube: 0.199',
+    'Cases per Pallet: 198 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 22',
+],
+image: 'images/products/l_forporks4-6oz.jpg'
+},
+//--------------------- Fortune Beef Liver Spread 4.6 oz. ---------------------//
+{
+name: 'Fortune Beef Liver Spread 4.6 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-bob18014',
+    'UPC: 0 22652 18014 5',
+    'Ingredients: beef liver, water, beef fat, beef, enriched flour mix (wheat flour, thiamine mononitrate, riboflavin, niacin, reduced iron, folic acid, and chlorine), salt, and contains 2% or less: nonfat dry milk, whey protein concentrate, modified corn starch, onion powder, monosodium glutamate, and sugar<br /><strong>Contains wheat and milk.</strong>',
+    'Pack Size: 24 cans at 4.6 oz. per can',
+    'Weight per Case: 9.30 lbs',
+    'Case Dimensions: 16 in. (L) × 10.75 in. (W) × 2 in. (H)',
+    'Case Cube: 0.199',
+    'Cases per Pallet: 198 cases',
+    'Pallet Pattern: (Ti) 9 × (Hi) 22',
+],
+image: 'images/products/l_forspdbeefl4-6oz.jpg'
+},
+//--------------------- Fortune Liver Spread 2.75 oz. ---------------------//
+{
+name: 'Fortune Liver Spread 2.75 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-bofor27z',
+    'UPC: 0 22652 18008 4',
+    'Ingredients: water, pork liver, pork fat, pork, whey protein concentrate (34%), wheat flour (wheat flour, niacin, thiamine mononitrate, riboflavin, reduced iron, and folic acid), salt, onion powder, sugar, gelatin, spices, garlic powder, sodium erythorbate, sodium nitrite, and partially hydrogenated soybean oil',
+    'Pack Size: 24 cans at 2.75 oz. per can',
+    'Weight per Case: 5.60 lbs',
+    'Tray Dimensions: 11 in. (L) × 8 in. (W) × 2 in. (H)',
+    'Tray Cube: 0.102',
+    'Trays per Pallet: 440 trays',
+    'Pallet Pattern: (Ti) 22 × (Hi) 20',
+],
+image: 'images/products/l_forliverspred2-75oz.jpg'
+},
+//--------------------- Fortune Liver Spread 4.76 oz. ---------------------//
+{
+name: 'Fortune Liver Spread 4.76 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-bofor135',
+    'UPC: 0 22652 18011 4',
+    'Ingredients: water, pork liver, pork fat, pork, whey protein concentrate (34%), wheat flour (wheat flour, niacin, thiamine mononitrate, riboflavin, reduced iron, and folic acid), salt, onion powder, sugar, gelatin, spices, garlic powder, sodium erythorbate, sodium nitrite, and partially hydrogenated soybean oil',
+    'Pack Size: 24 cans at 4.76 oz. per can',
+    'Weight per Tray: 9.30 lbs',
+    'Tray Dimensions: 16 in. (L) × 10.75 in. (W) × 2 in. (H)',
+    'Tray Cube: 0.199',
+    'Trays per Pallet: 198 trays',
+    'Pallet Pattern: (Ti) 9 × (Hi) 22',
+],
+image: 'images/products/l_forliverspred4-76oz.jpg'
+},
+//--------------------- Fortune Luncheon Meat (Pork & Chicken) 12 oz. ---------------------//
+{
+name: 'Fortune Luncheon Meat (Pork & Chicken) 12 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-adfpc012',
+    'UPC: 0 22652 17991 0',
+    'Ingredients: pork, mechanically separated chicken, water, salt, less than 2%: spices, sugar, sodium phosphate, sodium erythorbate, sodium nitrite, and natural flavoring',
+    'Pack Size: 12 cans at 12 oz. per can',
+    'Weight per Case: 11.5 lbs',
+    'Tray Dimensions: 13 in. (L) × 9.75 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.238',
+    'Trays per Pallet: 196 trays',
+    'Pallet Pattern: (Ti) 14 × (Hi) 14',
+],
+image: [
+    'images/products/l_forlmeatchicpor12oz.jpg',
+    'images/products/l_forlmeatchicpor12oz2.jpg',
+]
+},
+//--------------------- Fortune Ham and Pork Luncheon Meat 12 oz. ---------------------//
+{
+name: 'Fortune Ham and Pork Luncheon Meat 12 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-adfhp012',
+    'UPC: 0 22652 17994 1',
+    'Ingredients: ham, pork, water, sugar, salt, sodium phosphate, spices, sodium erythorbate, and sodium nitrite',
+    'Pack Size: 12 cans at 12 oz. per can',
+    'Weight per Tray: 11.5 lbs',
+    'Tray Dimensions: 13 in. (L) × 9.75 in. (W) × 3.25 in. (H)',
+    'Tray Cube: 0.238',
+    'Trays per Pallet: 196 trays',
+    'Pallet Pattern: (Ti) 14 × (Hi) 14',
+],
+image: [
+    'images/products/l_forlmeathamporkgre12oz.jpg',
+    'images/products/l_forlmeathamporkgre12oz2.jpg',
+]
+},
+//--------------------- Fortune Premium Luncheon Meat 12 oz. ---------------------//
+{
+name: 'Fortune Premium Luncheon Meat 12 oz.',
+brand: 'Fortune',
+type: 'Meat',
+description: '',
+information: [
+    'Item Key: eb-agfortun',
+    'UPC: 0 22652 17990 3',
+    'Ingredients: pork, water, salt, sugar, sodium phosphate, spices, sodium erythorbate, potassium chloride, sodium nitrite, and natural flavoring',
+    'Pack Size: 2 trays of 12 cans at 12 oz. per can',
+    'Weight per Case: 22.30 lbs',
+    'Case Dimensions: 16.5 in. (L) × 12.75 in. (W) × 4.75 in. (H)',
+    'Case Cube: 0.578',
+    'Cases per Pallet: 110 cases',
+    'Pallet Pattern: (Ti) 10 × (Hi) 11',
+],
+image: [
+    'images/products/l_forlmeatred12oz.jpg',
+    'images/products/l_forlmeatred12oz2.jpg',
+]
+},
+//--------------------- Fortune Pork Sung 5 lbs ---------------------//
+{
+name: 'Fortune Pork Sung 5 lbs',
+brand: 'Fortune',
+type: 'Meat',
+description: 'This pork product is first cooked, then dried.',
+information: [
+    'Item Key: db-afosu5p5',
+    'UPC: 0 22652 21901 2',
+    'Ingredients: pork, sugar, soy flour, soy sauce (water, soybean, wheat flour, salt, sodium benzoate), lard, salt, monosodium glutamate, and flavoring',
+    'Pack Size: 5 bags at 5 lbs per bag',
+    'Weight per Case: 27.0 lbs',
+    'Case Dimensions: 19 in. (L) × 14 in. (W) × 9.5 in. (H)',
+    'Case Cube: 1.462',
+    'Cases per Pallet: 49 Cases',
+    'Pallet Pattern: (Ti) 7 × (Hi) 7',
+],
+image: 'images/products/l_forporksung5lbs.jpg'
+},
+//--------------------- Falcon Luncheon Meat 340g (Canada) ---------------------//
+{
+name: 'Falcon Luncheon Meat 340g (Canada)',
+brand: 'Falcon',
+type: 'Meat',
+description: 'This product is sold only in Canada.',
+information: [
+    'Item Key: eb-afapc024',
+    'UPC: 0 22652 18004 6',
+    'Ingredients: mechanically separated chicken, water, salt, spices, sugar, sodium phosphate, sodium erythorbate, sodium nitrite, natural flavoring',
+    'Pack Size: 24 cans at 340g per can',
+    'Weight per Case: 23.0 lbs',
+    'Case Dimensions: 13 in. (L) × 9.75 in. (W) × 6.5 in. (H)',
+    'Case Cube: 0.495',
+    'Cases per Pallet: 98 cases',
+    'Pallet Pattern: (Ti) 14 × (Hi) 7',
+],
+image: ''
+},
+//--------------------- Sun Hing Luncheon Meat 340g (Canada) ---------------------//
+{
+name: 'Sun Hing Luncheon Meat 340g (Canada)',
+brand: 'Sun Hing',
+type: 'Meat',
+description: 'This product is sold only in Canada.',
+information: [
+    'Item Key: eb-ashlm024',
+    'UPC: 0 22652 18002 2',
+    'Ingredients: ham, pork, water, sugar, salt, sodium phosphate, spices, sodium erythorbate, and sodium nitrite<br />Ingrédients: jambon, porc, eau, sucre, sel, phosphate de sodium, épices, érythorbate de sodium, et nitrite de sodium',
+    'Pack Size: 24 cans at 340g per can',
+    'Weight per Case: 23.0 lbs',
+    'Case Dimensions: 13 in. (L) × 9.75 in. (W) × 6.5 in. (H)',
+    'Case Cube: 0.495',
+    'Cases per Pallet: 98 cases',
+    'Pallet Pattern: (Ti) 14 × (Hi) 7',
+    'Storage: Please keep refrigerated after opening.',
+    'Product of USA / Produit des É.-U.A.',
+],
+image: [
+    'images/products/l_shflmeat12oz.jpg',
+    'images/products/l_shflmeat12oz2.jpg',
+]
+},
+//--------------------- Medell Brand Ham & Pork Luncheon Meat 340g (Canada) ---------------------//
+{
+name: 'Medell Brand Ham & Pork Luncheon Meat 340g (Canada)',
+brand: 'Medell',
+type: 'Meat',
+description: 'This product is sold only in Canada.',
+information: [
+    'Item Key: eb-apmdhamp',
+    'UPC: 0 22652 18003 9',
+    'Ingredients: ham, pork, water, sugar, salt, sodium phosphate, spices, sodium erythorbate, and sodium nitrite<br />Ingrédients: jambon, porc, eau, sucre, sel, phosphate de sodium, épices, érythorbate de sodium, et nitrite de sodium',
+    'Pack Size: 24 cans at 340g per can',
+    'Weight per Case: 23.0 lbs',
+    'Case Dimensions: 13 in. (L) × 9.75 in. (W) × 6.5 in. (H)',
+    'Case Cube: 0.495',
+    'Cases per Pallet: 98 cases',
+    'Pallet Pattern: (Ti) 14 × (Hi) 7',
+    'Caution: Never heat unopened can. Storage: Please keep refrigerated after opening.<br />Jamais bidon non-ouvert de la chaleur. Frigorieiez après ouvert.',
+    'Product of USA / Produit des É.-U.A.',
+],
+image: [
+    'images/products/l_medlmeat340g.jpg',
+    'images/products/l_medlmeat340g2.jpg',
+]
 },
 //--------------------- End of Products ---------------------//
 

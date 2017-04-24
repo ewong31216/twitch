@@ -176,7 +176,27 @@ div.content div.page-products div.image {
     background-size: contain;
     background-position: center center;
 }
-div.content div.page-products div.brand-empty, div.content div.page-products div.products-empty {
+div.content div.page-products div.title-nav div.title-nav-item {
+    float: left;
+    margin-right: 20px;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+div.content div.page-products div.title-nav div.title-nav-item.inactive {
+    opacity: 0.3;
+}
+div.content div.page-products div.title-nav div.title-nav-item.inactive:hover {
+    opacity: 1;
+    border-color: #dd0000;
+    background-color: #ffffef;
+    cursor: pointer;
+}
+div.content div.page-products div.title-nav div.title-nav-item.inactive a {
+    color: #aa0000;
+    text-decoration: none;
+}
+div.content div.page-products div.brand-empty, div.content div.page-products div.type-empty, div.content div.page-products div.products-empty {
     margin-top: 40px;
     font-size: 21px;
     color: #dd0000;
@@ -200,6 +220,17 @@ div.content div.page-products div.brand-content a.item h3 {
 div.content div.page-products div.brand-content a.item div.image {
     width: 60px;
     height: 60px;
+}
+div.content div.page-products div.all-type-content div.type-div {
+    margin: 10px 0 0 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+div.content div.page-products div.all-type-content div.type-div a.product-item {
+    display: block;
+}
+div.content div.page-products div.all-type-content div.type-div.expand a.product-item {
+    display: block !important;
 }
 div.content div.page-products div.products-title, div.content div.page-products div.product-detail-title {
     margin-top: 20px;

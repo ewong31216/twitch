@@ -44,7 +44,7 @@ description: 'Dairy Products',
 image: 'images/brand/logohl.jpg'
 },
 {
-name: 'Flower Band',
+name: 'Flower Brand',
 description: 'Variety of Products',
 image: 'images/brand/logoflwr.gif'
 },
