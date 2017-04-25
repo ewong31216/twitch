@@ -234,11 +234,11 @@ $(function() {
         if (allType.is(':empty')) {
             if (window.sunhing.products && window.sunhing.products.length) {
                 $.each(window.sunhing.products, function (i, product) {
-                    var type = product.type;
+                    var type = product.type.replace(/\//g,'_');
                     if(type && type.length) {
                         var typeDiv = allType.find('div.' + type);
                         if(!typeDiv || !typeDiv.length){
-                            allType.append('<div class="type-div '+ type + '"><div class="title">' + type + '</div></div>');
+                            allType.append('<div class="type-div '+ type + '"><div class="title">' + product.type + '</div></div>');
                             typeDiv = allType.find('div.' + type);
                         }
                         typeDiv.append('<a class="product-item" href="#page=products&product=' + product.name + '">' + product.name + '</a>');
@@ -260,7 +260,7 @@ $(function() {
         allType.find('a.product-item').hide();
         allType.show();
         if(window.sunhing.params.type){
-            $('div.type-div.' + window.sunhing.params.type).addClass('expand');
+            $('div.type-div.' + window.sunhing.params.type.replace(/\//g,'_')).addClass('expand');
         }
     };
     var filterType = function (search) {
