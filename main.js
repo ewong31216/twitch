@@ -202,11 +202,10 @@ $(function() {
                         index = $product.attr('data-index'),
                         productObject = window.sunhing.products[productIndices[index]],
                         images = productObject.image,
-                        image = typeof images === 'string' ? images : images[0];
+                        image = typeof images === 'string' ? images : images[0],
+                        url = '#page=products&product=' + productObject.name;
                     $product.css('background-image','url(\'' + image  + '\')');
-                    $product.click(function(){
-                        window.location.href = '#page=products&product=' + productObject.name;
-                    });
+                    $product.attr('data-url', url);
                 });
             };
             var changeList = function(remain){
@@ -237,6 +236,11 @@ $(function() {
             });
             productsSelection.on('mouseleave', function(){
                 pause = false;
+            });
+            productsSelection.find('div.product-div').click(function(){
+                var $this = $(this),
+                    url = $this.attr('data-url');
+                window.location.href = url;
             });
         }
     };
