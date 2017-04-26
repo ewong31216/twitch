@@ -119,7 +119,127 @@ $(function() {
             window.sunhing.brandCarousel = setTimeout(nextItem, duration);
         });
     };
-    var listProducts = function (page) {};
+    var listProducts = function (page) {
+        if(!window.sunhing.products || !window.sunhing.products.length){
+            setTimeout(function(){
+                listProducts(page);
+            }, 100);
+        }else {
+            var container = $('div.main-pages.page-home'),
+                homeProducts = container.find('div.home-products'),
+                totalWidth = container.width();
+            homeProducts.width(totalWidth);
+            var numberOfProducts = 17; // odd number
+            if(numberOfProducts / 2 === Math.floor(numberOfProducts / 2)){
+                numberOfProducts++;
+            }
+            var maxWidth = 180,
+                minWidth = 20,
+                maxHeight = 200,
+                minHeight = 30,
+                maxOpacity = 1,
+                minOpacity = 1,
+                zIndexBase = 10,
+                propertyIndices = [],
+                productIndices = [],
+                changeListTimeout = 50,
+                setChangeListTimeout = 6000,
+                pause = false;
+            var productsDescription = $('<div class="title">We have a huge product selection</div><div class="description">Sun Hing Foods insists on the cream of the crop in every category. Sun Hing Foods believes customers demand consistent flavor and quality of ingredients above all before they purchase and serve any product.</div><div class="link">Please click on the product to see a full description.</div>'),
+                productsSelection = $('<div class="products-selection"></div>'),
+                numberDifference = (numberOfProducts - 1) / 2,
+                averageMargin = (totalWidth - maxWidth) / 2 / (numberDifference - 1),
+                marginIndices = [],
+                getSum = function(a, b){
+                    return a + b;
+                },
+                addProductIndex = function(){
+                    var index = -1,
+                        init = true;
+                    while (init || productIndices.indexOf(index) !== -1) {
+                        init = false;
+                        index = Math.floor(Math.random() * window.sunhing.products.length);
+                    }
+                    productIndices.push(index);
+                };
+            homeProducts.append(productsDescription);
+            homeProducts.append(productsSelection);
+            productsSelection.height(maxHeight);
+            for (var i = 0; i < numberOfProducts; i++) {
+                if (propertyIndices[numberOfProducts - i - 1]) {
+                    propertyIndices[i] = propertyIndices[numberOfProducts - i - 1];
+                } else {
+                    if(i > 0 && i < numberOfProducts / 4 && i !== (numberOfProducts - 1) / 4){
+                        var widthPrev = propertyIndices[i - 1].width,
+                            difference = Math.min(widthPrev - 1, averageMargin),
+                            thisIndex = averageMargin - difference;
+                        marginIndices.push(thisIndex);
+                    }else if(i !== (numberOfProducts - 1) / 4 && i < (numberOfProducts - 1) / 2){
+                        marginIndices.pop();
+                    }
+                    propertyIndices[i] = {
+                        width: (i * (maxWidth - minWidth) / numberDifference + minWidth),
+                        height: (i * (maxHeight - minHeight) / numberDifference + minHeight),
+                        zIndex: i + zIndexBase,
+                        margin: i * averageMargin - marginIndices.reduce(getSum, 0),
+                        opacity: (i * (maxOpacity - minOpacity) / numberDifference + minOpacity)
+                    };
+                }
+                productsSelection.append('<div class="product-div product-' + i + '" data-index="' + i + '"></div>');
+                var thisProduct = productsSelection.find('.product-' + i);
+                thisProduct.width(propertyIndices[i].width).height(propertyIndices[i].height).css('z-index', propertyIndices[i].zIndex).css('opacity', propertyIndices[i].opacity);
+                if (i < numberOfProducts / 2) {
+                    thisProduct.css('left', propertyIndices[i].margin);
+                } else {
+                    thisProduct.css('right', propertyIndices[i].margin);
+                }
+                addProductIndex();
+            }
+            var changeImage = function(){
+                var products = productsSelection.find('div.product-div');
+                $.each(products, function(i, product){
+                    var $product = $(product),
+                        index = $product.attr('data-index'),
+                        productObject = window.sunhing.products[productIndices[index]],
+                        images = productObject.image,
+                        image = typeof images === 'string' ? images : images[0];
+                    $product.css('background-image','url(\'' + image  + '\')');
+                    $product.click(function(){
+                        window.location.href = '#page=products&product=' + productObject.name;
+                    });
+                });
+            };
+            var changeList = function(remain){
+                if(isNaN(remain)){
+                    remain = numberOfProducts;
+                }
+                productIndices.shift();
+                addProductIndex();
+                changeImage();
+                if(remain > -1) {
+                    setTimeout(function () {
+                        changeList(remain - 1);
+                    }, changeListTimeout);
+                }
+            };
+            var changeInterval = function(){
+                if(!pause) {
+                    changeList();
+                    setTimeout(changeInterval, setChangeListTimeout);
+                }else{
+                    setTimeout(changeInterval, 1000);
+                }
+            };
+            setTimeout(changeInterval, setChangeListTimeout);
+            changeImage();
+            productsSelection.on('mouseenter', function(){
+                pause = true;
+            });
+            productsSelection.on('mouseleave', function(){
+                pause = false;
+            });
+        }
+    };
     var listRecipes = function (page) {};
     var makeSlideShow = function (page) {};
     var showProductsAndBrand = function () {

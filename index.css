@@ -155,6 +155,43 @@ div.sidebar .brand-carousel .item h3 {
 div.content div.pages {
     margin-top: 20px;
 }
+div.main-pages.page-home >div.home {
+    overflow-x: hidden;
+}
+div.main-pages.page-home div.home-products div.description {
+    font-size: 18px;
+    font-style: italic;
+    margin: 20px 0;
+}
+div.main-pages.page-home div.home-products div.link {
+    font-size: 16px;
+    color: #aa0000;
+    font-weight: 600;
+}
+div.main-pages.page-home div.home-products div.products-selection {
+    margin-top: 160px;
+    width: 100%;
+}
+div.main-pages.page-home div.home-products div.products-selection div.product-div {
+    bottom: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+div.main-pages.page-home div.home-products div.products-selection div.product-div:hover {
+    width: 180px !important;
+    height: 200px !important;
+    z-index: 999999 !important;
+    background-position: center center;
+    opacity: 1 !important;
+    background-size: contain;
+    background-color: #fff;
+    box-shadow: 0 0 5px grey;
+}
 div.content div.page-products a.item {
     float: left;
     margin: 0 20px 0 0;
