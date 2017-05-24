@@ -1,4 +1,4 @@
-var dataFiles = ['brand','products','recipes'];
+var dataFiles = ['brand','products','recipes','events'];
 $.each(dataFiles, function(i, file) {
     var script = document.createElement('script');
     script.setAttribute("type", "text/javascript");
