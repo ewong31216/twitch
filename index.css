@@ -106,7 +106,8 @@ nav.navbar div.media-icon img {
     height: 24px;
 }
 nav.navbar div.est-date {
-    font-family: "brush-script-std", cursive;
+    /*font-family: "brush-script-std", cursive;*/
+    font-style: italic;
     color: #990000;
     font-weight: 600;
     font-size: 20px;
@@ -151,6 +152,12 @@ div.sidebar .brand-carousel .item {
 }
 div.sidebar .brand-carousel .item h3 {
     color: #aa0000;
+    font-size: 24px;
+    font-weight: 600;
+}
+div.sidebar .brand-carousel .item h4 {
+    color: black;
+    font-size: 14px;
 }
 div.content div.pages {
     margin-top: 20px;
@@ -169,7 +176,7 @@ div.main-pages.page-home div.home-products div.link {
     font-weight: 600;
 }
 div.main-pages.page-home div.home-products div.products-selection {
-    margin-top: 160px;
+    margin-top: 225px;
     width: 100%;
 }
 div.main-pages.page-home div.home-products div.products-selection div.product-div {

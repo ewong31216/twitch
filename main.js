@@ -136,19 +136,20 @@ $(function() {
             var maxWidth = 180,
                 minWidth = 20,
                 maxHeight = 200,
-                minHeight = 30,
+                minHeight = 200, //30
                 maxOpacity = 1,
                 minOpacity = 1,
                 zIndexBase = 10,
                 propertyIndices = [],
                 productIndices = [],
-                changeListTimeout = 50,
-                setChangeListTimeout = 6000,
+                changeListTimeout = 1000,
+                setChangeListTimeout = 1000,
+                changeCycle = false,
                 pause = false;
             var productsDescription = $('<div class="title">We have a huge product selection</div><div class="description">Sun Hing Foods insists on the cream of the crop in every category. Sun Hing Foods believes customers demand consistent flavor and quality of ingredients above all before they purchase and serve any product.</div><div class="link">Please click on the product to see a full description.</div>'),
                 productsSelection = $('<div class="products-selection"></div>'),
                 numberDifference = (numberOfProducts - 1) / 2,
-                averageMargin = (totalWidth - maxWidth) / 2 / (numberDifference - 1),
+                averageMargin = (totalWidth - maxWidth) / 2 / numberDifference,
                 marginIndices = [],
                 getSum = function(a, b){
                     return a + b;
@@ -209,21 +210,32 @@ $(function() {
                 });
             };
             var changeList = function(remain){
-                if(isNaN(remain)){
-                    remain = numberOfProducts;
-                }
-                productIndices.shift();
-                addProductIndex();
-                changeImage();
-                if(remain > -1) {
-                    setTimeout(function () {
-                        changeList(remain - 1);
-                    }, changeListTimeout);
+                if(!pause) {
+                    if (isNaN(remain)) {
+                        remain = numberOfProducts;
+                    }
+                    productIndices.shift();
+                    addProductIndex();
+                    changeImage();
+                    if (remain > -1) {
+                        changeCycle = true;
+                        setTimeout(function () {
+                            changeList(remain - 1);
+                        }, changeListTimeout);
+                    } else {
+                        changeCycle = false;
+                    }
+                }else{
+                    setTimeout(function(){
+                        changeList(remain);
+                    }, 1000);
                 }
             };
             var changeInterval = function(){
                 if(!pause) {
-                    changeList();
+                    if(!changeCycle) {
+                        changeList();
+                    }
                     setTimeout(changeInterval, setChangeListTimeout);
                 }else{
                     setTimeout(changeInterval, 1000);
