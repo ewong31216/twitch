@@ -44,6 +44,9 @@ $(function() {
             case 'products':
                 showProductsAndBrand();
                 break;
+            case 'customers':
+                showCustomers();
+                break;
             case 'recipes':
                 showRecipes();
                 break;
@@ -497,6 +500,7 @@ $(function() {
         productsTitle.show();
         productsContent.show();
     };
+    var showCustomers = function(){};
     var showRecipes = function(){
         if (window.sunhing.params.recipe) {
             var recipes = $.grep(window.sunhing.recipes, function (recipe) {
@@ -532,7 +536,12 @@ $(function() {
                 var thisDiv = $('<div class="type-item"></div>'),
                     thisRecipes = $.grep(window.sunhing.recipes, function(recipe){
                         return recipe && recipe.type === type;
-                    });
+                    }),
+                    defaultImages = {
+                        'Main Dish': 'dinner.svg',
+                        'Dessert': 'cupcake.svg',
+                        'Drinks': 'orange-juice.svg'
+                    };
                 if(thisRecipes && thisRecipes.length) {
                     var thisContent = $('<div class="content"></div>');
                     thisDiv.append('<div class="title" style="top:' + (i * rowHeight + 50) + 'px;">' + type + '</div>').append(thisContent);
@@ -540,6 +549,8 @@ $(function() {
                         var image = '';
                         if(recipe.image && recipe.image.length){
                             image = '<div class="image" style="background-image:url(\'' + recipe.image + '\')"></div>';
+                        }else{
+                            image = '<div class="image" style="background-image:url(\'images/recipes/' + defaultImages[recipe.type] + '\')"></div>';
                         }
                         thisContent.append('<a href="#page=recipes&recipe=' + encodeURIComponent(recipe.name) + '" class="recipe-item item type-' + type.replace(' ','-') + '"><h3>' + recipe.name + '</h3>'  + image + '</a>');
                     });

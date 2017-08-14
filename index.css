@@ -209,7 +209,7 @@ div.content div.page-products a.item {
 }
 div.content div.page-products a.item:hover {
     border: 1px solid #aa0000;
-    background-color: #ffffef;
+    /*background-color: #ffffef;*/
     box-shadow: 0 0 5px #aa0000;
 }
 div.content div.page-products div.image {
@@ -293,6 +293,20 @@ div.content div.page-products div.product-detail-content div.subtitle {
     font-size: 18px;
     font-weight: 600;
 }
+div.content div.page-customers h2, div.content div.page-customers h3 {
+    color: #aa0000;
+}
+div.content div.page-customers .header-image {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+}
+div.content div.page-customers a.pdf {
+    background-image: url('images/customers/pdf.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    padding-left: 22px;
+}
 div.content div.page-recipes ul.recipe-nav {
     padding: 0;
 }
@@ -339,9 +353,25 @@ div.content div.page-recipes div.nav-content div.type-item .content a.recipe-ite
     margin: 0 10px;
     width: 160px;
     height: 240px;
+    position: relative;
+}
+div.content div.page-recipes div.nav-content div.type-item .content a.recipe-item .image {
+    position: absolute;
+    bottom: 0;
 }
 div.content div.page-recipes div.recipes-detail-content div.nav-content div.description {
     float: right;
+}
+div.content div.page-contact h2 {
+    color: #aa0000;
+}
+div.content div.page-contact a.phone {
+    background-image: url('images/contact/call.svg');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    padding-left: 30px;
+    line-height: 24px;
+    display: inline-block;
 }
 @media (min-width: 481px) and (max-width: 600px){
     i.fa {
