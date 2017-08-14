@@ -373,6 +373,17 @@ div.content div.page-contact a.phone {
     line-height: 24px;
     display: inline-block;
 }
+div.content div.page-contact a.google {
+    background-image: url('images/contact/google.svg');
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    padding-left: 30px;
+    line-height: 24px;
+    display: inline-block;
+}
+div.content div.page-about h2 {
+    color: #aa0000;
+}
 @media (min-width: 481px) and (max-width: 600px){
     i.fa {
         margin-right: 7px;

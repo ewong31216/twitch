@@ -44,9 +44,6 @@ $(function() {
             case 'products':
                 showProductsAndBrand();
                 break;
-            case 'customers':
-                showCustomers();
-                break;
             case 'recipes':
                 showRecipes();
                 break;
@@ -500,7 +497,6 @@ $(function() {
         productsTitle.show();
         productsContent.show();
     };
-    var showCustomers = function(){};
     var showRecipes = function(){
         if (window.sunhing.params.recipe) {
             var recipes = $.grep(window.sunhing.recipes, function (recipe) {
