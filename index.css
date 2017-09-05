@@ -165,6 +165,59 @@ div.content div.pages {
 div.main-pages.page-home >div.home {
     overflow-x: hidden;
 }
+div.main-pages.page-home div.home-products div.links {
+    margin-bottom: 20px;
+}
+div.main-pages.page-home div.home-products div.links div.link {
+    width: 400px;
+    height: 80px;
+    float: left;
+    cursor: pointer;
+    opacity: 0.7;
+    text-align: center;
+    font-size: 32px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+div.main-pages.page-home div.home-products div.links div.link:hover {
+    opacity: 1;
+}
+div.main-pages.page-home div.home-products div.links div.link div.word {
+    width: 100%;
+    padding-top: 20px;
+}
+div.main-pages.page-home div.home-products div.links div.link.products {
+    background-image: url('images/supermarket.jpg');
+    background-size: 480px 320px;
+    background-position: -40px 0;
+}
+div.main-pages.page-home div.home-products div.links div.link.customers {
+    background-image: url('images/meeting.jpg');
+    background-size: 580px 280px;
+    background-position: 0 -100px;
+}
+div.main-pages.page-home div.home-products div.links div.link.recipes {
+    background-image: url('images/supermarket.jpg');
+    background-size: 580px 320px;
+    background-position: -119px -239px;
+}
+div.main-pages.page-home div.home-products div.links div.link.events {
+    background-image: url('images/calendar.jpg');
+    background-size: 480px 220px;
+    background-position: -8px -80px;
+}
+div.main-pages.page-home div.home-products div.links div.link.contact {
+    background-image: url('images/meeting.jpg');
+    background-size: 680px 320px;
+    background-position: -278px -218px;
+}
+div.main-pages.page-home div.home-products div.links div.link.about {
+    background-image: url('images/calendar.jpg');
+    background-size: 480px 320px;
+    background-position: -25px -25px;
+}
 div.main-pages.page-home div.home-products div.description {
     font-size: 18px;
     font-style: italic;
@@ -176,7 +229,7 @@ div.main-pages.page-home div.home-products div.link {
     font-weight: 600;
 }
 div.main-pages.page-home div.home-products div.products-selection {
-    margin-top: 225px;
+    margin-top: 20px;
     width: 100%;
 }
 div.main-pages.page-home div.home-products div.products-selection div.product-div {

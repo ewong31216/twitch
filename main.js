@@ -146,7 +146,8 @@ $(function() {
                 setChangeListTimeout = 1000,
                 changeCycle = false,
                 pause = false;
-            var productsDescription = $('<div class="title">We have a huge product selection</div><div class="description">Sun Hing Foods insists on the cream of the crop in every category. Sun Hing Foods believes customers demand consistent flavor and quality of ingredients above all before they purchase and serve any product.</div><div class="link">Please click on the product to see a full description.</div>'),
+            var linkDivs = $('<div class="links"><div class="link products" link-page="products"><div class="word">Products</div></div><div class="link customers" link-page="customers"><div class="word">Customers</div></div><div class="link recipes" link-page="recipes"><div class="word">Recipes</div></div><div class="link events" link-page="events"><div class="word">Events</div></div><div class="link contact" link-page="contact"><div class="word">Contact</div></div><div class="link about" link-page="about"><div class="word">About</div></div><br clear="all" /></div>'),
+                productsDescription = $('<div class="title">We have a huge product selection</div><div class="description">Sun Hing Foods insists on the cream of the crop in every category. Sun Hing Foods believes customers demand consistent flavor and quality of ingredients above all before they purchase and serve any product.</div><div class="link">Please click on the product to see a full description.</div>'),
                 productsSelection = $('<div class="products-selection"></div>'),
                 numberDifference = (numberOfProducts - 1) / 2,
                 averageMargin = (totalWidth - maxWidth) / 2 / numberDifference,
@@ -163,9 +164,18 @@ $(function() {
                     }
                     productIndices.push(index);
                 };
+            homeProducts.append(linkDivs);
             homeProducts.append(productsDescription);
             homeProducts.append(productsSelection);
             productsSelection.height(maxHeight);
+            linkDivs.find('div.link').click(function(){
+                var $this = $(this),
+                    linkPage = $this.attr('link-page');
+
+                if(linkPage && linkPage.length){
+                    window.location.href="#page=" + linkPage;
+                }
+            });
             for (var i = 0; i < numberOfProducts; i++) {
                 if (propertyIndices[numberOfProducts - i - 1]) {
                     propertyIndices[i] = propertyIndices[numberOfProducts - i - 1];
