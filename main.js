@@ -46,6 +46,8 @@ $(function() {
                 break;
             case 'recipes':
                 showRecipes();
+            case 'events':
+                showEvents();
                 break;
         }
     };
@@ -645,6 +647,109 @@ $(function() {
                 }
             });
             navContent.append(directionDiv);
+        }
+    };
+    var showEvents = function(){
+        if (window.sunhing.params.event && window.sunhing.params.start && window.sunhing.params.end) {
+            var events = $.grep(window.sunhing.events, function (event) {
+                return event && event.name === window.sunhing.params.event && event.start === window.sunhing.params.start && event.end === window.sunhing.params.end;
+            });
+            if (events && events.length === 1) {
+                showEventDetail(events[0]);
+                $('div.all-events-content').hide();
+                $('div.event-detail-content').show();
+            }
+        } else {
+            showAllEvents();
+            $('div.all-events-content').show();
+            $('div.event-detail-content').hide();
+        }
+    };
+    var showAllEvents = function(){
+        var yearEvents = {},
+            years = [];
+        if(window.sunhing.events && window.sunhing.events.length){
+            $.each(window.sunhing.events, function(i, event){
+                var startDate = event.start,
+                    startYear = startDate.replace(/\/.*$/,''),
+                    endDate = event.end,
+                    endYear = endDate.replace(/\/.*$/,'');
+                if(!yearEvents[startYear]){
+                    yearEvents[startYear] = [];
+                    years.push(startYear);
+                }
+                if(!yearEvents[endYear]){
+                    yearEvents[endYear] = [];
+                    years.push(endYear);
+                }
+                yearEvents[startYear].push(event);
+                if(startYear !== endYear){
+                    yearEvents[endYear].push(event);
+                }
+            });
+            years.sort().reverse();
+        }
+        if(years.length){
+            var barHeight = 600,
+                stopHeight = 40,
+                stopMarginBottom = 20,
+                stopBorderWidth = 4;
+            $('.all-events-content').append('<h3>Years</h3>');
+            $('.all-events-content').append('<div class="year-bar"></div><div class="year-events"></div>');
+            $('.year-bar').height(barHeight);
+            $.each(years, function(i, year){
+                $('.year-bar').append('<div class="year-stop-' + i + ' year-stop">' + year + '</div><div class="year-stop-pointer-' + i + ' year-stop-pointer"></div>');
+                $('.year-stop-' + i).css({'height': stopHeight,'width': stopHeight,'border-radius': stopHeight / 2,'margin-bottom': stopMarginBottom, 'left': (stopHeight - stopBorderWidth) / -2, 'border': stopBorderWidth + 'px solid #dd0000','top': i * (stopHeight + stopMarginBottom)});
+                $('.year-stop-pointer-' + i).css({'top': i * (stopHeight + stopMarginBottom) + stopHeight / 2});
+            });
+            $('.year-stop').on('click mouseover', function(ev){
+                var $this = $(this),
+                    pointer = $this.next('.year-stop-pointer'),
+                    year = $this.text();
+                $('.year-stop-pointer').hide();
+                $('.year-events').css({'margin-top': 0});
+                pointer.show();
+                showYear(year);
+                $('.year-events').show();
+                if($this.offset().top > $('.year-events').offset().top + $('.year-events').height()){
+                    $('.year-events').css({'margin-top': $this.offset().top - $('.year-events').offset().top - $('.year-events').height() + 20});
+                }
+            });
+            var showYear = function(year){
+                if(year && year.length && yearEvents[year]){
+                    $('.year-events').empty();
+                    $.each(yearEvents[year], function(i, event){
+                        $('.year-events').append('<div class="event-tile-' + i + ' event-tile"><h4>' + event.name + '</h4><div class="image" style="background-image: url(\'' + event.image + '\'" /><div class="dates">' + event.start + ' - ' + event.end + '</div></div>');
+                        $('.event-tile-' + i).click(function(){
+                            window.location.href="#page=events&event=" + encodeURIComponent(event.name) + "&start=" + event.start + "&end=" + event.end;
+                        });
+                    });
+                    $('.year-events').append('<br clear="all" />');
+                }
+            };
+            $('.year-stop-0').trigger('click');
+            $('.year-events').css({'margin-top': 0});
+        }
+    };
+    var showEventDetail = function(event){
+        $('div.event-detail-content').append('<h3>' + event.name + '</h3>');
+        if(event.image) {
+            $('div.event-detail-content').append('<img src="' + event.image + '" />');
+        }
+        if(event.url){
+            $('div.event-detail-content').append('<div class="url">Website:&nbsp;<a target="_blank" href="' + event.url + '">' + event.url + '</a></div>');
+        }
+        if(event.location){
+            $('div.event-detail-content').append('<div class="location">Location:&nbsp;' + event.location + '</div>');
+        }
+        if(event.description){
+            $('div.event-detail-content').append('<div class="description">' + event.description + '</div>');
+        }
+        $('div.event-detail-content').append('<div class="dates"><span class="caption">Start Date:&nbsp;</span><span class="date">' + event.start + '</span><br /><span class="caption">End Date:&nbsp;</span><span class="date">' + event.end + '</span></div>');
+        if(event.pictures && event.pictures.length){
+            $.each(event.pictures, function(i, picture){
+                $('div.event-detail-content').append('<div class="pictures" style="background-image: url(\'' + picture + '\')"></div>');
+            });
         }
     };
     $(window).on('hashchange', function (e) {
