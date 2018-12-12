@@ -85,30 +85,30 @@ class DateRange extends Component{
                 <div className="to-date-container">
                     <label className="to-date">To</label>
                     <DatePicker
-                        value={moment(this.state.toDate).format("HH:mm:ss DD/MM/YYYY")}
+                        value={moment(this.state.toDate).format("HH:mm:ss MM/DD/YYYY")}
                         onChange={this.onChangeToDate}
                         showTimeSelect
                         timeFormat="HH:mm:ss"
                         timeIntervals={5}
-                        dateFormat="HH:mm:ss dd/MM/yyyy"
+                        dateFormat="HH:mm:ss MM/dd/yyyy"
                         timeCaption="time"
                     />
                     <br />
-                    <div className="helptext">(HH:mm:ss DD/MM/YYYY)</div>
+                    <div className="helptext">(HH:mm:ss MM/DD/YYYY)</div>
                 </div>
                 <div className="from-date-container">
                     <label className="from-date">From</label>
                     <DatePicker
-                        value={moment(this.state.fromDate).format("HH:mm:ss DD/MM/YYYY")}
+                        value={moment(this.state.fromDate).format("HH:mm:ss MM/DD/YYYY")}
                         onChange={this.onChangeFromDate}
                         showTimeSelect
                         timeFormat="HH:mm:ss"
                         timeIntervals={5}
-                        dateFormat="HH:mm:ss dd/MM/yyyy"
+                        dateFormat="HH:mm:ss MM/dd/yyyy"
                         timeCaption="time"
                     />
                     <br />
-                    <div className="helptext">(HH:mm:ss DD/MM/YYYY)</div>
+                    <div className="helptext">(HH:mm:ss MM/DD/YYYY)</div>
                 </div>
                 <button className="go-button" disabled={!this.state.valid} onClick={this.onGoButton}>Go</button>
             </div>

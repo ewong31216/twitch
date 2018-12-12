@@ -23,6 +23,7 @@ class App extends Component {
         this.state = {
             current: 0,
             data: [],
+            noData: false,
             center: {
                 lat: 59.95,
                 lng: 30.33
@@ -72,7 +73,8 @@ class App extends Component {
 
             this.setState({
                 current: 0,
-                data: this.processData(data)
+                data: this.processData(data),
+                noData: !data.length
             });
         });
     }
@@ -84,6 +86,9 @@ class App extends Component {
                     <div className="title">Vehicle Statistics</div>
                     <DateRange fetchData={this.fetchData}></DateRange>
                 </div>
+            { this.state.noData ? (
+                <h2>No data is returned. Please check your date range and try again!</h2>
+            ) : false }
                 <div className="right-content">
                     <Graph {...this.state} dataKey={'rssi'} color={"#00f"} title={'Signal'}></Graph>
                     <Graph {...this.state} dataKey={'speed'} color={"#0f0"} title={'Speed'}></Graph>
