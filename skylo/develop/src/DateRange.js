@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import moment from 'moment';
 
 class DateRange extends Component{
     constructor(props) {
         super(props);
 
+        this.checkValid = this.checkValid.bind(this);
+        this.isValid = this.isValid.bind(this);
         this.onChangeToDate = this.onChangeToDate.bind(this);
         this.onChangeFromDate = this.onChangeFromDate.bind(this);
         this.onGoButton = this.onGoButton.bind(this);
@@ -13,13 +18,13 @@ class DateRange extends Component{
         };
 
         this.state = {
-            toDate: false,
-            fromDate: false,
+            toDate: new Date(),
+            fromDate: new Date(),
             valid: false
         };
     }
 
-    componentDidUpdate(){
+    checkValid(){
         let valid = this.isValid();
 
         if(valid !== this.state.valid){
@@ -53,16 +58,16 @@ class DateRange extends Component{
         return true;
     }
 
-    onChangeToDate(e){
+    onChangeToDate(date){
         this.setState({
-            toDate: this.getDate(e.target.value)
-        });
+            toDate: new Date(date)
+        }, this.checkValid);
     }
 
-    onChangeFromDate(e){
+    onChangeFromDate(date){
         this.setState({
-            fromDate: this.getDate(e.target.value)
-        });
+            fromDate: new Date(date)
+        }, this.checkValid);
     }
 
     onGoButton() {
@@ -79,13 +84,29 @@ class DateRange extends Component{
             <div className="date-range">
                 <div className="to-date-container">
                     <label className="to-date">To</label>
-                    <input type="text" onChange={this.onChangeToDate} />
+                    <DatePicker
+                        value={moment(this.state.toDate).format("HH:mm:ss DD/MM/YYYY")}
+                        onChange={this.onChangeToDate}
+                        showTimeSelect
+                        timeFormat="HH:mm:ss"
+                        timeIntervals={5}
+                        dateFormat="HH:mm:ss dd/MM/yyyy"
+                        timeCaption="time"
+                    />
                     <br />
                     <div className="helptext">(HH:mm:ss DD/MM/YYYY)</div>
                 </div>
                 <div className="from-date-container">
                     <label className="from-date">From</label>
-                    <input type="text" onChange={this.onChangeFromDate} />
+                    <DatePicker
+                        value={moment(this.state.fromDate).format("HH:mm:ss DD/MM/YYYY")}
+                        onChange={this.onChangeFromDate}
+                        showTimeSelect
+                        timeFormat="HH:mm:ss"
+                        timeIntervals={5}
+                        dateFormat="HH:mm:ss dd/MM/yyyy"
+                        timeCaption="time"
+                    />
                     <br />
                     <div className="helptext">(HH:mm:ss DD/MM/YYYY)</div>
                 </div>

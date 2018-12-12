@@ -20,15 +20,15 @@ class Graph extends Component {
 
         let offset = 60,
             width = this.props.width || 400,
-            left = current * width / (data.length || 1) + offset,
+            left = current * (width - offset) / (data.length || 1) + offset,
             color = this.props.color || this.getRandomColor();
 
         return data && data.length ? (
             <div className="graph-container current-line-container">
                 <div className="title">{this.props.title}</div>
                 <div className="current-line" style={{left: left}}></div>
-                <LineChart width={width} height={200} data={data} margin={{ top: 20, right: 20, bottom: 5, left: 0 }}>
-                    <Line type="monotone" connectNulls={true} dataKey={dataKey} stroke={color} key={dataKey} />
+                <LineChart width={width} height={200} data={data} margin={{ top: 20, right: 0, bottom: 5, left: 0 }}>
+                    <Line type="monotone" connectNulls={true} dataKey={dataKey} stroke={color} key={dataKey} dot={{r:0}} />
                     <YAxis />
                 </LineChart>
             </div>

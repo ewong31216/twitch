@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-    max-width: 1024px;
+    width: 1000px;
 }
 
 .App-logo {
@@ -67,6 +67,7 @@ div.header div.date-range div.helptext {
 div.right-content {
     float: right;
     width: 400px;
+    clear: right;
 }
 
 div.main-content {
