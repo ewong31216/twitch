@@ -16,6 +16,10 @@ User can start another game within a game session, which will be prompted before
 
 Winning or losing messages will be displayed once the game finished, and locations of mines will be displayed if losing the game.
 
+**Unit Testing**
+
+I am not good at it and I only put 3 sample cases for testing App in App.test.js to demonstrate. I choose Enzyme, Chai, and I ran into a little problem with Jest. I am more used to angular's mock which is in jasmine.
+
 (Automatic README comment below)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

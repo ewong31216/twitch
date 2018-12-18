@@ -71,7 +71,7 @@ class App extends Component {
                 return (
                     <div className="message">
                         <h1 className="game">Welcome to Mine Sweeper</h1>
-                        <h3>By Eric Wong - December 17, 2018</h3>
+                        <h3>By Eric Wong - December 18, 2018</h3>
                     </div>
                 );
         }
