@@ -11,6 +11,8 @@ class DateRange extends Component{
         this.isValid = this.isValid.bind(this);
         this.onChangeToDate = this.onChangeToDate.bind(this);
         this.onChangeFromDate = this.onChangeFromDate.bind(this);
+        this.onSelectToDate = this.onSelectToDate.bind(this);
+        this.onSelectFromDate = this.onSelectFromDate.bind(this);
         this.onGoButton = this.onGoButton.bind(this);
 
         this.data = {
@@ -46,6 +48,14 @@ class DateRange extends Component{
         return false;
     }
 
+    setTime(date, time){
+        let hours = time.getHours(),
+            minutes = time.getMinutes(),
+            seconds = time.getSeconds();
+
+        return new Date(date.getFullYear(), date.getMonth(), date.getDate(), hours, minutes, seconds);
+    }
+
     isValid(){
         if(!this.state.fromDate || !this.state.toDate){
             return false;
@@ -60,11 +70,23 @@ class DateRange extends Component{
 
     onChangeToDate(date){
         this.setState({
-            toDate: new Date(date)
+            toDate: this.setTime(this.state.toDate, new Date(date))
         }, this.checkValid);
     }
 
     onChangeFromDate(date){
+        this.setState({
+            fromDate: this.setTime(this.state.fromDate, new Date(date))
+        }, this.checkValid);
+    }
+
+    onSelectToDate(date){
+        this.setState({
+            toDate: new Date(date)
+        }, this.checkValid);
+    }
+
+    onSelectFromDate(date){
         this.setState({
             fromDate: new Date(date)
         }, this.checkValid);
@@ -86,7 +108,9 @@ class DateRange extends Component{
                     <label className="to-date">To</label>
                     <DatePicker
                         value={moment(this.state.toDate).format("HH:mm:ss MM/DD/YYYY")}
+                        selected={this.state.toDate}
                         onChange={this.onChangeToDate}
+                        onSelect={this.onSelectToDate}
                         showTimeSelect
                         timeFormat="HH:mm:ss"
                         timeIntervals={5}
@@ -100,7 +124,9 @@ class DateRange extends Component{
                     <label className="from-date">From</label>
                     <DatePicker
                         value={moment(this.state.fromDate).format("HH:mm:ss MM/DD/YYYY")}
+                        selected={this.state.fromDate}
                         onChange={this.onChangeFromDate}
+                        onSelect={this.onSelectFromDate}
                         showTimeSelect
                         timeFormat="HH:mm:ss"
                         timeIntervals={5}
