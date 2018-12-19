@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/skylo/precache-manifest.b6e195644af396bef4c41f818f294418.js"
+  "/skylo/precache-manifest.8292e8d55e396f122e3f3169e99fa216.js"
 );
 
 workbox.clientsClaim();
