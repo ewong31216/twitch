@@ -1,15 +1,15 @@
 {
-  "main.css": "/skylo/static/css/main.294f6251.chunk.css",
-  "main.js": "/skylo/static/js/main.98c758fa.chunk.js",
-  "main.js.map": "/skylo/static/js/main.98c758fa.chunk.js.map",
-  "static/css/1.de6525f7.chunk.css": "/skylo/static/css/1.de6525f7.chunk.css",
-  "static/js/1.c493ed29.chunk.js": "/skylo/static/js/1.c493ed29.chunk.js",
-  "static/js/1.c493ed29.chunk.js.map": "/skylo/static/js/1.c493ed29.chunk.js.map",
-  "runtime~main.js": "/skylo/static/js/runtime~main.2dbd8b60.js",
-  "runtime~main.js.map": "/skylo/static/js/runtime~main.2dbd8b60.js.map",
-  "static/css/1.de6525f7.chunk.css.map": "/skylo/static/css/1.de6525f7.chunk.css.map",
-  "static/css/main.294f6251.chunk.css.map": "/skylo/static/css/main.294f6251.chunk.css.map",
-  "index.html": "/skylo/index.html",
-  "precache-manifest.8292e8d55e396f122e3f3169e99fa216.js": "/skylo/precache-manifest.8292e8d55e396f122e3f3169e99fa216.js",
-  "service-worker.js": "/skylo/service-worker.js"
+  "main.css": "/project/static/css/main.294f6251.chunk.css",
+  "main.js": "/project/static/js/main.569eac49.chunk.js",
+  "main.js.map": "/project/static/js/main.569eac49.chunk.js.map",
+  "static/css/1.de6525f7.chunk.css": "/project/static/css/1.de6525f7.chunk.css",
+  "static/js/1.c493ed29.chunk.js": "/project/static/js/1.c493ed29.chunk.js",
+  "static/js/1.c493ed29.chunk.js.map": "/project/static/js/1.c493ed29.chunk.js.map",
+  "runtime~main.js": "/project/static/js/runtime~main.e733734c.js",
+  "runtime~main.js.map": "/project/static/js/runtime~main.e733734c.js.map",
+  "static/css/1.de6525f7.chunk.css.map": "/project/static/css/1.de6525f7.chunk.css.map",
+  "static/css/main.294f6251.chunk.css.map": "/project/static/css/main.294f6251.chunk.css.map",
+  "index.html": "/project/index.html",
+  "precache-manifest.2a36078e9046ad1f47f1f85091755057.js": "/project/precache-manifest.2a36078e9046ad1f47f1f85091755057.js",
+  "service-worker.js": "/project/service-worker.js"
 }
