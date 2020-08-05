@@ -40,7 +40,6 @@ class SlideShow extends Component {
             slideClassName: 'slide moving'
         });
         setTimeout(() => {
-            console.log(this.state.current);
             this.setState({
                 current: this.state.current >= this.slides.length - 1 ? 0 : this.state.current + 1,
                 slideClassName: 'slide'

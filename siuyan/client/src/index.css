@@ -60,3 +60,29 @@ code {
     transition: 1s;
     left: -50%;
 }
+
+@media only screen and (max-width: 540px) {
+    .slide-show-container {
+        height: 220px;
+    }
+}
+@media only screen and (min-width: 541px) and (max-width: 660px) {
+    .slide-show-container {
+        height: 260px;
+    }
+}
+@media only screen and (min-width: 661px) and (max-width: 780px) {
+    .slide-show-container {
+        height: 300px;
+    }
+}
+@media only screen and (min-width: 781px) and (max-width: 980px) {
+    .slide-show-container {
+        height: 360px;
+    }
+}
+@media only screen and (min-width: 981px) and (max-width: 1200px) {
+    .slide-show-container {
+        height: 400px;
+    }
+}
