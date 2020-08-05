@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/siuyan/static/css/main.2567367e.chunk.css",
+    "main.css": "/siuyan/static/css/main.127d1086.chunk.css",
     "main.js": "/siuyan/static/js/main.6bfee5ca.chunk.js",
     "main.js.map": "/siuyan/static/js/main.6bfee5ca.chunk.js.map",
     "runtime-main.js": "/siuyan/static/js/runtime-main.0137cacd.js",
@@ -8,16 +8,16 @@
     "static/js/2.ca1cf0d1.chunk.js": "/siuyan/static/js/2.ca1cf0d1.chunk.js",
     "static/js/2.ca1cf0d1.chunk.js.map": "/siuyan/static/js/2.ca1cf0d1.chunk.js.map",
     "index.html": "/siuyan/index.html",
-    "precache-manifest.21e16acc0524641f356e143256574588.js": "/siuyan/precache-manifest.21e16acc0524641f356e143256574588.js",
+    "precache-manifest.bd16557fbeb77ba78d062d21c27074c8.js": "/siuyan/precache-manifest.bd16557fbeb77ba78d062d21c27074c8.js",
     "service-worker.js": "/siuyan/service-worker.js",
-    "static/css/main.2567367e.chunk.css.map": "/siuyan/static/css/main.2567367e.chunk.css.map",
+    "static/css/main.127d1086.chunk.css.map": "/siuyan/static/css/main.127d1086.chunk.css.map",
     "static/js/2.ca1cf0d1.chunk.js.LICENSE.txt": "/siuyan/static/js/2.ca1cf0d1.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/siuyan/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0137cacd.js",
     "static/js/2.ca1cf0d1.chunk.js",
-    "static/css/main.2567367e.chunk.css",
+    "static/css/main.127d1086.chunk.css",
     "static/js/main.6bfee5ca.chunk.js"
   ]
 }
